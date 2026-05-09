@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  --color-prussian: #14213d;
+  --color-prussian-light: #1a2d52;
+  --color-prussian-dark: #0d1629;
+  --color-accent: #fca311;
+  --color-accent-hover: #e8940a;
+  --color-accent-light: #fbb84430;
+  --color-alabaster: #e5e5e5;
+  --color-card: #f7f7f8;
+  --color-card-dark: #1e3456;
+  --color-surface: #fafbfc;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===== Base ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* ===== LinkedIn Badge ===== */
+.LI-profile-badge { margin: 0 auto; }
+.LI-simple-link { color: white !important; }
+
+/* ===== Premium grain overlay ===== */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  z-index: 1;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUpScale {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes shimmer-btn {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 0.6; }
+  75%, 100% { transform: scale(2.2); opacity: 0; }
+}
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
+.animate-slideUp { animation: slideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.animate-slideUpScale { animation: slideUpScale 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.animate-pulse-soft { animation: pulse-soft 2s ease-in-out infinite; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-ping-slow { animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+
+/* ===== CTA button shimmer ===== */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-accent);
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,0.15) 50%, transparent 75%);
+  background-size: 250% 100%;
+  animation: shimmer-btn 4s ease-in-out infinite;
+  pointer-events: none;
+}
+.btn-primary:hover { background-color: var(--color-accent-hover); transform: translateY(-1px); box-shadow: 0 12px 32px -8px rgba(252, 163, 17, 0.35); }
+.btn-primary:active { transform: translateY(0) scale(0.98); }
+@media (hover: none) {
+  .btn-primary:hover { transform: none; box-shadow: none; }
+}
+
+/* ===== Reveal system ===== */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Premium card hover ===== */
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+@media (hover: hover) {
+  .card-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px -16px rgba(20, 33, 61, 0.1);
+  }
+}
+
+/* ===== Gradient text ===== */
+.text-gradient {
+  background: linear-gradient(135deg, #fca311 0%, #fbb844 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Section spacing ===== */
+.section-mobile { padding-top: 4rem; padding-bottom: 4rem; }
+@media (min-width: 768px) {
+  .section-mobile { padding-top: 7rem; padding-bottom: 7rem; }
+}
+
+/* ===== Glass pill ===== */
+.glass-pill {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ===== Focus ring ===== */
+:focus-visible {
+  outline: 2px solid rgba(252, 163, 17, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===== Scroll progress bar ===== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #fca311, #fbb844);
+  z-index: 60;
+  transition: width 0.1s linear;
+}
+
+/* ===== Safe area ===== */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .safe-top { padding-top: env(safe-area-inset-top); }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+}
