@@ -27,7 +27,7 @@ const CASE_STUDIES = [
       { icon: Target, value: 'Star schema', label: 'BI model' },
     ],
     problem: 'Sales teams need clear pipeline, activity, and revenue metrics, but CRM data often becomes difficult to analyze when it is split across sources.',
-    challenge: 'Build a clean analytics layer with staged dbt models, quality tests, and a star schema designed for BI reporting.',
+    challenge: 'Building a clean analytics layer with staged dbt models, quality tests, and a star schema designed for BI reporting.',
     tools: ['Python', 'SQL', 'dbt', 'Snowflake', 'Power BI', 'Data Modeling'],
     output: 'Synthetic CRM data generation, Snowflake loading, dbt transformations, documented marts, and Power BI dashboards.',
     value: 'Shows my ability to connect data engineering, analytics modeling, and BI delivery in one workflow.',
@@ -52,7 +52,7 @@ const CASE_STUDIES = [
       { icon: Database, value: 'Dagster', label: 'Orchestration' },
     ],
     problem: 'Weather data needs repeatable ingestion, validation, and monitoring before it can be used reliably downstream.',
-    challenge: 'Design an automated workflow with clear dependencies, validation steps, and failure visibility.',
+    challenge: 'Designing an automated workflow with clear dependencies, validation steps, and failure visibility.',
     tools: ['Python', 'Dagster', 'dbt', 'dlt', 'Great Expectations', 'SQL'],
     output: 'Orchestrated weather pipeline with validation, storage, and run monitoring.',
     value: 'Shows practical pipeline design with orchestration, validation, and monitoring.',
@@ -77,7 +77,7 @@ const CASE_STUDIES = [
       { icon: Users, value: 'Metabase', label: 'Dashboards' },
     ],
     problem: 'Marketing teams need consistent campaign, session, and conversion metrics before they can compare ROI across channels.',
-    challenge: 'Model multi-channel data into a clean analytics layer for attribution, conversion, and reporting analysis.',
+    challenge: 'Modeling multi-channel data into a clean analytics layer for attribution, conversion, and reporting analysis.',
     tools: ['Python', 'Snowflake', 'dbt', 'dlt', 'Dagster', 'Metabase'],
     output: 'Marketing reporting model and Metabase dashboards for channel performance, ROI tracking, and conversion trends.',
     value: 'Shows how I translate business questions into modeled metrics and BI-ready reporting.',
@@ -102,7 +102,7 @@ const CASE_STUDIES = [
       { icon: BarChart3, value: 'Sales', label: 'Trends' },
     ],
     problem: 'Vehicle marketplace data needs structured product, customer, and transaction models before teams can analyze behavior and sales trends.',
-    challenge: 'Connect product, customer, and transaction entities into a unified analytics model.',
+    challenge: 'Connecting product, customer, and transaction entities into a unified analytics model.',
     tools: ['Python', 'Airbyte', 'Dagster', 'dbt', 'Elementary', 'Snowflake'],
     output: 'Analytics workflow with customer segmentation, sales trend analysis, and dashboard-ready models.',
     value: 'Shows practical modeling for product, sales, and customer analytics.',
@@ -249,7 +249,7 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
               onClick={onBookCall}
               className="group inline-flex items-center gap-2.5 px-6 py-3.5 md:px-7 md:py-4 bg-accent hover:bg-accent-hover text-prussian font-semibold text-[14px] md:text-[15px] rounded-full transition-all duration-200 shadow-xl shadow-accent/15 active:scale-[0.97] md:hover:scale-[1.02]"
             >
-              Schedule a Recruiter Intro
+              Book an Intro Call
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </button>
           </div>

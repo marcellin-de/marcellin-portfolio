@@ -148,7 +148,7 @@ export default function Hero({ onBookCall }: HeroProps) {
                   onClick={onBookCall}
                   className="w-full sm:w-auto btn-primary group inline-flex items-center justify-center gap-2.5 px-6 py-4 md:px-7 md:py-4 text-prussian font-semibold text-[15px] rounded-full"
                 >
-                  Schedule a Recruiter Intro
+                  Book an Intro Call
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </button>
 
@@ -173,13 +173,13 @@ export default function Hero({ onBookCall }: HeroProps) {
       <section className="bg-white">
         <div className="max-w-[1120px] mx-auto px-5 md:px-8 py-10 md:py-20">
           <div className="grid grid-cols-2 gap-6 md:gap-10">
-            <AnimatedCounter target={50} suffix="+" label="Stakeholders supported" desc="Operational teams supported through KPI dashboards and recurring reporting" />
+            <AnimatedCounter target={50} suffix="+" label="Stakeholders supported" desc="Operational teams supported through KPI dashboards and automated recurring reporting" />
             <AnimatedCounter target={70} suffix="%" label="Reporting time reduced" desc="Up to 70% reduction on recurring reporting workflows" />
             <AnimatedCounter target={7} suffix="" label="Certifications" desc="dbt, SQL, Airflow, AWS, dlt, and data engineering" />
             <div className="group cursor-default">
               <p className="text-[32px] md:text-[44px] font-extrabold text-prussian tracking-[-0.03em] leading-none group-hover:text-accent transition-colors duration-300">6K+</p>
               <p className="text-[13px] md:text-sm font-semibold text-prussian/70 mt-1.5">LinkedIn community</p>
-              <p className="text-[12px] md:text-[13px] text-gray-400 mt-0.5 leading-snug">Data professionals following my work and portfolio projects</p>
+              <p className="text-[12px] md:text-[13px] text-gray-400 mt-0.5 leading-snug">Data professionals following my learning, projects, and data content</p>
             </div>
           </div>
         </div>

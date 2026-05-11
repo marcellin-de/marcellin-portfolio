@@ -1,5 +1,5 @@
-import { ArrowRight, ExternalLink, Globe } from 'lucide-react';
-import { useEffect, useState, useRef } from 'react';
+import { ArrowRight } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface SectionProps {
@@ -24,7 +24,7 @@ export function About({ onBookCall: _onBookCall }: SectionProps) {
               At SETRAG, I worked as a Data Analyst Intern from March 2025 to June 2025. I helped automate KPI tracking and recurring reporting for operational teams, contributing to a reduction of up to 70% in manual reporting time.
             </p>
             <p>
-              I hold a Bachelor's Degree in Big Data and Data Analytics, and I am pursuing a Professional Master's in AI Engineering at Université Centrale Tunisie. My portfolio projects use Python, SQL, dbt, Snowflake, Dagster, Airflow, Power BI, Metabase, dlt, Airbyte, Great Expectations, Soda, Docker, and GitHub Actions.
+              I hold a Bachelor's Degree in Big Data and Data Analytics, and I am currently pursuing a Professional Master's in AI Engineering at Université Centrale Tunisie. My portfolio projects use Python, SQL, dbt, Snowflake, Dagster, Airflow, Power BI, Metabase, dlt, Airbyte, Great Expectations, Soda, Docker, and GitHub Actions.
             </p>
             <p>
               I speak French natively and English at a professional level. I am open to junior Data Engineer, Analytics Engineer, BI Developer, and Data Analyst roles, including entry-level, graduate, and internship opportunities.
@@ -37,15 +37,12 @@ export function About({ onBookCall: _onBookCall }: SectionProps) {
 }
 
 export function RecruiterSnapshot({ onBookCall }: SectionProps) {
-  const [badgeRendered, setBadgeRendered] = useState(false);
   const badgeRef = useRef<HTMLDivElement>(null);
   const section = useScrollReveal();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (badgeRef.current && badgeRef.current.children.length > 1) {
-        setBadgeRendered(true);
-      }
+      if (!badgeRef.current) return;
     }, 4000);
     return () => clearTimeout(timer);
   }, []);
@@ -91,40 +88,19 @@ export function RecruiterSnapshot({ onBookCall }: SectionProps) {
 
           {/* LinkedIn badge - prominent centered */}
           <div className={`reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`} style={{ transitionDelay: '300ms' }}>
-            <div className="bg-card-dark/40 backdrop-blur-sm rounded-2xl border border-white/[0.08] p-5 md:p-7">
-              <div className="flex flex-col md:flex-row items-center gap-5 md:gap-8">
-                {/* Badge */}
-                <div ref={badgeRef} className="w-full md:w-auto flex justify-center">
-                  <div
-                    className="badge-base LI-profile-badge"
-                    data-locale="en_US"
-                    data-size="large"
-                    data-theme="light"
-                    data-type="HORIZONTAL"
-                    data-vanity="marcellindjambo"
-                    data-version="v1"
-                  >
-                    <a className="badge-base__link LI-simple-link" href="https://tn.linkedin.com/in/marcellindjambo?trk=profile-badge"></a>
-                  </div>
-                </div>
-
-                {/* Divider */}
-                <div className="hidden md:block w-px h-16 bg-white/[0.06]" />
-                <div className="md:hidden w-12 h-px bg-white/[0.06]" />
-
-                {/* Quick links */}
-                <div className="flex flex-col sm:flex-row md:flex-col gap-3 sm:gap-6 md:gap-2.5 text-center md:text-left">
-                  <div>
-                    <p className="text-[10px] text-white/20 uppercase tracking-wider font-semibold mb-1.5">Languages</p>
-                    <div className="flex flex-col sm:flex-row md:flex-col gap-1">
-                      <span className="flex items-center justify-center md:justify-start gap-1.5 text-[13px] text-white/60">
-                        <Globe className="w-3.5 h-3.5 text-accent/50" /> French (Native)
-                      </span>
-                      <span className="flex items-center justify-center md:justify-start gap-1.5 text-[13px] text-white/60">
-                        <Globe className="w-3.5 h-3.5 text-accent/50" /> English (Professional)
-                      </span>
-                    </div>
-                  </div>
+            <div className="flex flex-col md:flex-row items-center gap-5 md:gap-8">
+              {/* Badge */}
+              <div ref={badgeRef} className="w-full md:w-auto flex justify-center">
+                <div
+                  className="badge-base LI-profile-badge"
+                  data-locale="en_US"
+                  data-size="large"
+                  data-theme="light"
+                  data-type="HORIZONTAL"
+                  data-vanity="marcellindjambo"
+                  data-version="v1"
+                >
+                  <a className="badge-base__link LI-simple-link" href="https://tn.linkedin.com/in/marcellindjambo?trk=profile-badge"></a>
                 </div>
               </div>
             </div>
@@ -137,7 +113,7 @@ export function RecruiterSnapshot({ onBookCall }: SectionProps) {
             onClick={onBookCall}
             className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 md:px-7 md:py-4 bg-accent hover:bg-accent-hover text-prussian font-semibold text-[14px] md:text-[15px] rounded-full transition-all duration-200 shadow-xl shadow-accent/15 active:scale-[0.97] md:hover:scale-[1.02]"
           >
-            Schedule a Recruiter Intro
+            Book an Intro Call
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </button>
         </div>
@@ -186,7 +162,7 @@ export function FinalCTA({ onBookCall }: SectionProps) {
             onClick={onBookCall}
             className="btn-primary group inline-flex items-center justify-center gap-2.5 px-8 py-4 md:px-9 md:py-[18px] text-prussian font-semibold text-[15px] md:text-base rounded-full shadow-xl shadow-accent/20"
           >
-            Schedule a Recruiter Intro
+            Book an Intro Call
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </button>
           <p className="mt-4 text-[11px] text-white/20">LinkedIn and GitHub are available for quick review.</p>

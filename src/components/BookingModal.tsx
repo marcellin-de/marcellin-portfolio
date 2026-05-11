@@ -57,7 +57,7 @@ export default function BookingModal({
               id="booking-modal-title"
               className="text-[18px] font-extrabold tracking-tight text-prussian sm:text-[22px]"
             >
-              Schedule a Recruiter Intro
+              Book an Intro Call
             </h2>
             <p className="mt-1 text-[12px] leading-relaxed text-gray-500 sm:text-[13px]">
               Pick a time to discuss role fit, projects, and next steps.

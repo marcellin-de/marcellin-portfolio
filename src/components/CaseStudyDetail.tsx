@@ -43,7 +43,7 @@ const DETAILS: Record<number, DetailData> = {
     },
     context: 'A portfolio simulation showing how B2B CRM data can be organized for sales reporting. The project covers synthetic data generation, loading, transformation, dimensional modeling, testing, and BI delivery.',
     problem: 'Sales teams need clear pipeline, activity, and revenue metrics, but CRM data often becomes difficult to analyze when it is split across sources.',
-    challenge: 'Build a clean analytics layer with staged dbt models, quality tests, and a star schema designed for BI reporting.',
+    challenge: 'Building a clean analytics layer with staged dbt models, quality tests, and a star schema designed for BI reporting.',
     approach: [
       { step: 'Generate synthetic CRM data', desc: 'Created B2B sales data with Python, including accounts, contacts, deals, products, and sales activities, to simulate a realistic CRM workflow.', icon: Database },
       { step: 'Load into Snowflake', desc: 'Ingested raw CSV files into Snowflake as the cloud data warehouse, establishing a clean raw layer for downstream transformation.', icon: Layers },
@@ -88,7 +88,7 @@ const DETAILS: Record<number, DetailData> = {
     },
     context: 'A weather data platform built to demonstrate pipeline architecture with orchestration, automated quality checks, and run visibility.',
     problem: 'Weather data needs repeatable ingestion, validation, and monitoring before it can be used reliably downstream.',
-    challenge: 'Design an automated workflow with clear dependencies, validation steps, and failure visibility.',
+    challenge: 'Designing an automated workflow with clear dependencies, validation steps, and failure visibility.',
     approach: [
       { step: 'Connect to weather API', desc: 'Built a Python-based ingestion layer that pulls weather data from public APIs with basic error handling and retry logic.', icon: Database },
       { step: 'Orchestrate with Dagster', desc: 'Configured Dagster as the orchestration engine for scheduling runs, managing dependencies between assets, and tracking pipeline health.', icon: Cog },
@@ -131,7 +131,7 @@ const DETAILS: Record<number, DetailData> = {
     },
     context: 'A portfolio analytics project using the Maven Fuzzy Factory e-commerce dataset to model marketing performance, conversion behavior, and channel-level KPIs.',
     problem: 'Marketing teams need consistent campaign, session, and conversion metrics before they can compare ROI across channels.',
-    challenge: 'Model multi-channel data into a clean analytics layer for attribution, conversion, and reporting analysis.',
+    challenge: 'Modeling multi-channel data into a clean analytics layer for attribution, conversion, and reporting analysis.',
     approach: [
       { step: 'Map marketing entities', desc: 'Mapped the dataset around sessions, campaigns, traffic sources, conversions, and revenue-related metrics.', icon: Database },
       { step: 'Build ingestion pipelines', desc: 'Created ingestion workflows to consolidate source data into a unified raw layer.', icon: Layers },
@@ -174,7 +174,7 @@ const DETAILS: Record<number, DetailData> = {
     },
     context: 'A vehicle e-commerce analytics project that connects product, customer, and transaction data into a structured model for reporting and analysis.',
     problem: 'Vehicle marketplace data needs structured product, customer, and transaction models before teams can analyze behavior and sales trends.',
-    challenge: 'Connect product, customer, and transaction entities into a unified analytics model with segmentation, trend analysis, and dashboard-ready outputs.',
+    challenge: 'Connecting product, customer, and transaction entities into a unified analytics model with segmentation, trend analysis, and dashboard-ready outputs.',
     approach: [
       { step: 'Map e-commerce data', desc: 'Analyzed product catalog, user behavior, transactions, and vehicle specifications.', icon: Database },
       { step: 'Build data pipelines', desc: 'Created Python pipelines to extract, clean and load e-commerce data into Snowflake for analysis.', icon: Layers },
@@ -250,7 +250,7 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
                 onClick={onBookCall}
                 className="px-4 py-1.5 md:px-5 md:py-2 bg-accent hover:bg-accent-hover text-prussian text-[12px] md:text-[13px] font-semibold rounded-full transition-all active:scale-[0.97]"
               >
-                Recruiter Intro
+                Book an Intro Call
               </button>
             </div>
           </div>

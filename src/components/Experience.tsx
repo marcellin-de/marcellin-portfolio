@@ -51,11 +51,11 @@ const EDUCATION = [
 ];
 
 const CERTIFICATIONS = [
-  { name: 'Analytics Engineering with dbt', issuer: 'Edureka', date: '2026' },
-  { name: 'Data Engineer', issuer: 'DataCamp', date: '2026' },
-  { name: 'Associate Data Engineer in SQL', issuer: 'DataCamp', date: '2026' },
-  { name: 'dbt Fundamentals', issuer: 'DataCamp', date: '2026' },
-  { name: 'dlt Fundamentals', issuer: 'dltHub', date: '2026' },
+  { name: 'Analytics Engineering with dbt', issuer: 'Edureka', date: 'In progress' },
+  { name: 'Data Engineer', issuer: 'DataCamp', date: 'In progress' },
+  { name: 'Associate Data Engineer in SQL', issuer: 'DataCamp', date: 'In progress' },
+  { name: 'dbt Fundamentals', issuer: 'DataCamp', date: 'In progress' },
+  { name: 'dlt Fundamentals', issuer: 'dltHub', date: 'In progress' },
   { name: 'Data Engineering with Apache Airflow', issuer: 'LinkedIn', date: '2024' },
   { name: 'AWS Academy - Cloud Foundations', issuer: 'AWS', date: '2024' },
 ];

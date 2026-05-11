@@ -27,6 +27,7 @@ export function WhyMe({ onBookCall }: WhyMeProps) {
       <div className="max-w-[1120px] mx-auto px-5 md:px-8">
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
           <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Why Me</p>
+          <p className="text-[14px] md:text-base font-semibold text-prussian mb-2">Why I fit junior data roles</p>
           <p className="text-[14px] md:text-base text-gray-500 leading-relaxed">
             I bring hands-on project work, internship impact, and a clear understanding of how data work supports operational teams.
           </p>
@@ -59,14 +60,14 @@ export function WhyMe({ onBookCall }: WhyMeProps) {
           {/* CTAs */}
           <div ref={cta.ref} className={`reveal-hidden ${cta.isVisible ? 'reveal-visible' : ''}`}>
             <p className="text-[13px] md:text-[14px] text-gray-400 mb-5 leading-relaxed">
-              For a quick screen, you can review my resume or schedule a short recruiter intro.
+              For a quick screen, you can review my resume or book a short intro call.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-2.5">
               <button
                 onClick={onBookCall}
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 md:px-7 md:py-4 btn-primary text-prussian font-semibold text-[14px] md:text-[15px] rounded-full shadow-xl shadow-accent/15"
               >
-                Schedule a Recruiter Intro
+                Book an Intro Call
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>
               <a
@@ -110,7 +111,7 @@ const APPROACH_PHASES = [
     phase: 'Deliver',
     color: 'bg-emerald-500',
     steps: [
-      { num: 8, label: 'Monitor failures', desc: 'Monitor pipeline issues before they affect reporting.' },
+      { num: 8, label: 'Monitor workflows', desc: 'Monitor pipeline issues before they affect reporting.' },
       { num: 9, label: 'Deliver dashboards', desc: 'Build BI reports that answer real business questions.' },
       { num: 10, label: 'Document & iterate', desc: 'Maintain documentation and improve based on feedback.' },
     ],
