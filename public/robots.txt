@@ -1,9 +1,10 @@
+# robots.txt for marcellin.tech
+# Allow search engines to crawl the public portfolio
+
 User-agent: *
 Allow: /
+
 Disallow: /admin
 Disallow: /.env
 
-Sitemap: https://marcellin.tech/sitemap.xml
-
-# Crawl delay to be nice to the server
-Crawl-delay: 1
+Sitemap: https://www.marcellin.tech/sitemap.xml
