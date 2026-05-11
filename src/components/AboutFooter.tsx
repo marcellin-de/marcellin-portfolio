@@ -99,27 +99,13 @@ export function RecruiterSnapshot({ onBookCall }: SectionProps) {
                     className="badge-base LI-profile-badge"
                     data-locale="en_US"
                     data-size="large"
-                    data-theme="dark"
+                    data-theme="light"
                     data-type="HORIZONTAL"
                     data-vanity="marcellindjambo"
                     data-version="v1"
                   >
-                    <a className="badge-base__link LI-simple-link" href="https://tn.linkedin.com/in/marcellindjambo?trk=profile-badge">Marcellin DJAMBO</a>
+                    <a className="badge-base__link LI-simple-link" href="https://tn.linkedin.com/in/marcellindjambo?trk=profile-badge"></a>
                   </div>
-                  {!badgeRendered && (
-                    <div className="flex flex-col items-center gap-2 text-center">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/250px-LinkedIn_icon.svg.png"
-                        alt="LinkedIn"
-                        className="w-10 h-10"
-                      />
-                      <p className="text-[14px] text-white/50 font-medium">Marcellin DJAMBO</p>
-                      <p className="text-[12px] text-white/30">Early-career Data & Analytics Engineer</p>
-                      <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[13px] text-accent hover:text-accent-hover transition-colors font-medium">
-                        <ExternalLink className="w-3 h-3" /> View LinkedIn Profile
-                      </a>
-                    </div>
-                  )}
                 </div>
 
                 {/* Divider */}
