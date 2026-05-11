@@ -5,7 +5,7 @@ interface HeroProps {
   onBookCall: () => void;
 }
 
-const PROFILE_PHOTO = 'https://www.marcellin.tech/_next/image?url=%2Fassets%2Flogo.jpg&w=256&q=75';
+const PROFILE_PHOTO = '/profile.jpg';
 const LINKEDIN = 'https://www.linkedin.com/in/marcellindjambo';
 const GITHUB = 'https://github.com/marcellin-de';
 

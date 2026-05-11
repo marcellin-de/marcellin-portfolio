@@ -8,7 +8,6 @@ interface SectionProps {
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/marcellindjambo';
 const GITHUB_URL = 'https://github.com/marcellin-de';
-
 export function About({ onBookCall: _onBookCall }: SectionProps) {
   const section = useScrollReveal();
 
@@ -163,7 +162,7 @@ export function RecruiterSnapshot({ onBookCall }: SectionProps) {
 
 export function FinalCTA({ onBookCall }: SectionProps) {
   const section = useScrollReveal();
-  const PROFILE_PHOTO = 'https://www.marcellin.tech/_next/image?url=%2Fassets%2Flogo.jpg&w=256&q=75';
+  const PROFILE_PHOTO = '/profile.jpg';
 
   return (
     <section className="relative bg-prussian section-mobile overflow-hidden grain">
