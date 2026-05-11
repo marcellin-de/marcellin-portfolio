@@ -27,9 +27,6 @@ export function WhyMe({ onBookCall }: WhyMeProps) {
       <div className="max-w-[1120px] mx-auto px-5 md:px-8">
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
           <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Why Me</p>
-          <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
-            Why I fit junior data roles
-          </h2>
           <p className="text-[14px] md:text-base text-gray-500 leading-relaxed">
             I bring hands-on project work, internship impact, and a clear understanding of how data work supports operational teams.
           </p>
