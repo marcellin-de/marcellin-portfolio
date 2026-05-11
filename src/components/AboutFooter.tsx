@@ -165,7 +165,6 @@ export function FinalCTA({ onBookCall }: SectionProps) {
             Book an Intro Call
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </button>
-          <p className="mt-4 text-[11px] text-white/20">LinkedIn and GitHub are available for quick review.</p>
         </div>
       </div>
     </section>

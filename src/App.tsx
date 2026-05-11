@@ -5,6 +5,7 @@ import { Experience } from './components/Experience';
 import { Services, Stack } from './components/ServicesStack';
 import { WhyMe, Approach } from './components/WhyMe';
 import { About, RecruiterSnapshot, FinalCTA, Footer } from './components/AboutFooter';
+import BackToTop from './components/BackToTop';
 
 const BOOKING_URL = 'https://cal.com/marcellin-de/data-role-intro-30min';
 
@@ -27,6 +28,7 @@ export default function App() {
       <RecruiterSnapshot onBookCall={openBooking} />
       <FinalCTA onBookCall={openBooking} />
       <Footer onBookCall={openBooking} />
+      <BackToTop />
     </div>
   );
 }
