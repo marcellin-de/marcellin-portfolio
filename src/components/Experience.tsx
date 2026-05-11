@@ -51,13 +51,13 @@ const EDUCATION = [
 ];
 
 const CERTIFICATIONS = [
-  { name: 'Analytics Engineering with dbt', issuer: 'Edureka', date: 'In progress' },
-  { name: 'Data Engineer', issuer: 'DataCamp', date: 'In progress' },
-  { name: 'Associate Data Engineer in SQL', issuer: 'DataCamp', date: 'In progress' },
-  { name: 'dbt Fundamentals', issuer: 'DataCamp', date: 'In progress' },
-  { name: 'dlt Fundamentals', issuer: 'dltHub', date: 'In progress' },
-  { name: 'Data Engineering with Apache Airflow', issuer: 'LinkedIn', date: '2024' },
-  { name: 'AWS Academy - Cloud Foundations', issuer: 'AWS', date: '2024' },
+  { name: 'Analytics Engineering with dbt', issuer: 'Edureka', date: 'Completed' },
+  { name: 'Data Engineer', issuer: 'DataCamp', date: 'Completed' },
+  { name: 'Associate Data Engineer in SQL', issuer: 'DataCamp', date: 'Completed' },
+  { name: 'dbt Fundamentals', issuer: 'DataCamp', date: 'Completed' },
+  { name: 'dlt Fundamentals', issuer: 'dltHub', date: 'Completed' },
+  { name: 'Data Engineering with Apache Airflow', issuer: 'LinkedIn', date: 'Completed' },
+  { name: 'AWS Academy - Cloud Foundations', issuer: 'AWS', date: 'Completed' },
 ];
 
 export function Experience() {

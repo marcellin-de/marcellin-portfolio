@@ -257,13 +257,7 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
 
           {/* Cover */}
           <div className="relative h-44 sm:h-56 md:h-72 overflow-hidden">
-            <img 
-              src={detail.cover} 
-              alt={`${detail.title} - Case study cover`}
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-cover" 
-            />
+            <img src={detail.cover} alt="" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-prussian-dark/90 via-prussian/50 to-prussian/20" />
             <div className="absolute bottom-0 left-0 right-0 p-5 md:p-10 max-w-[900px] mx-auto">
               <p className="text-[10px] md:text-[11px] font-semibold text-accent/70 uppercase tracking-widest mb-1.5">Case Study</p>

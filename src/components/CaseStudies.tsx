@@ -150,10 +150,8 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
                     <img
                       src={cs.cover}
                       alt={`${cs.title} visualization`}
-                      loading="lazy"
-                      decoding="async"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1120px) 90vw, 1120px"
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-prussian-dark/90 via-prussian/40 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">

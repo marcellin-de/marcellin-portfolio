@@ -81,7 +81,7 @@ export function Services({ onBookCall }: ServicesProps) {
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
             Where I can contribute
           </h2>
-          <p className="text-[14px] md:text-base text-gray-600 leading-relaxed">
+          <p className="text-[14px] md:text-base text-gray-500 leading-relaxed">
             Practical areas where I can support a junior or early-career data role.
           </p>
         </div>

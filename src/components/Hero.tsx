@@ -92,16 +92,13 @@ export default function Hero({ onBookCall }: HeroProps) {
         <div className="relative z-10 max-w-[1120px] mx-auto px-5 md:px-8 pt-20 pb-12 md:pt-28 md:pb-24 w-full">
           <div className="flex flex-col items-center text-center lg:flex-row lg:text-left lg:items-center gap-8 lg:gap-16">
             {/* Profile photo */}
-            <div className={`flex-shrink-0 transition-all duration-700 delay-100 ${mounted ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{willChange: 'transform, opacity'}}>
+            <div className={`flex-shrink-0 transition-all duration-700 delay-100 ${mounted ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
               <div className="relative">
                 <div className="absolute -inset-2.5 rounded-full bg-gradient-to-br from-accent/20 via-accent/5 to-transparent blur-lg" />
                 <div className="absolute -inset-[2px] rounded-full bg-gradient-to-br from-accent/40 to-accent/10" />
                 <img
                   src={PROFILE_PHOTO}
                   alt="Marcellin DJAMBO profile photo"
-                  loading="eager"
-                  decoding="async"
-                  sizes="(max-width: 768px) 96px, 160px"
                   className="relative w-24 h-24 md:w-[160px] md:h-[160px] rounded-full object-cover border-[3px] border-black/40"
                 />
                 {/* Status dot with ping */}
@@ -117,11 +114,11 @@ export default function Hero({ onBookCall }: HeroProps) {
               {/* Availability */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 glass-pill rounded-full mb-5 md:mb-7">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-soft" />
-                <span className="text-[11px] md:text-[12px] font-medium text-white/80">Available for new opportunities</span>
+                <span className="text-[11px] md:text-[12px] font-medium text-white/60">Available for new opportunities</span>
               </div>
 
               {/* Location */}
-              <div className="flex items-center justify-center lg:justify-start gap-3 text-[11px] text-white/50 mb-4">
+              <div className="flex items-center justify-center lg:justify-start gap-3 text-[11px] text-white/25 mb-4">
                 <span className="flex items-center gap-1"><MapPin className="w-3 h-3" /> Tunis, Tunisia</span>
                 <span className="flex items-center gap-1"><Globe className="w-3 h-3" /> FR / EN</span>
               </div>
