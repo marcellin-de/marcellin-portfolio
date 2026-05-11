@@ -1,0 +1,4 @@
+Contact: security@marcellin.tech
+Expires: 2027-05-11T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://marcellin.tech/.well-known/security.txt

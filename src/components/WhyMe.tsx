@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, CheckCircle2, Sparkles } from 'lucide-react';
+import { ArrowRight, ExternalLink, CheckCircle2 } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface WhyMeProps {
@@ -6,13 +6,13 @@ interface WhyMeProps {
 }
 
 const DIFF_POINTS = [
-  { text: 'I build end-to-end data systems — from ingestion to dashboard — not isolated components', highlight: false },
-  { text: 'I combine data engineering, analytics engineering and BI into one cohesive skill set', highlight: false },
-  { text: 'Reliability, quality and documentation are built into my process — not afterthoughts', highlight: false },
-  { text: 'I speak both technical and business — I translate data work into stakeholder value', highlight: true },
-  { text: 'Already delivered measurable impact at SETRAG: 70% time reduction, 50+ users served', highlight: false },
-  { text: 'I learn fast, communicate clearly and structure every project with rigor', highlight: false },
-  { text: 'I treat data as a product — not just a pipeline output', highlight: true },
+  { text: 'I can contribute across the data workflow: ingestion, transformation, modeling, and BI.', highlight: false },
+  { text: 'My SETRAG internship gave me practical exposure to operational reporting, KPI tracking, and automation.', highlight: false },
+  { text: 'I use SQL, dbt, data quality checks, and documentation to keep analytics work maintainable.', highlight: false },
+  { text: 'I communicate in French and English and can connect technical work with stakeholder needs.', highlight: true },
+  { text: 'I am open to junior, entry-level, graduate, and internship opportunities depending on team needs.', highlight: false },
+  { text: 'I learn quickly and document my work so others can review, reuse, and improve it.', highlight: false },
+  { text: 'I share my learning through GitHub projects, certifications, and a 6K+ LinkedIn community.', highlight: true },
 ];
 
 const RESUME_URL = 'https://drive.google.com/file/d/1LJ6laD9ofPpLWuqR_E4IFP4qwAEX-yK9/view';
@@ -28,23 +28,18 @@ export function WhyMe({ onBookCall }: WhyMeProps) {
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
           <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Why Me</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
-            What I bring that others don't
+            Why I fit junior data roles
           </h2>
           <p className="text-[14px] md:text-base text-gray-500 leading-relaxed">
-            Most data professionals specialize in one layer. I build the full system — and I make sure it actually works for the business.
+            I bring hands-on project work, internship impact, and a clear understanding of how data work supports operational teams.
           </p>
         </div>
 
         <div className="max-w-3xl">
           {/* Anchor quote */}
           <div ref={points.ref} className={`relative bg-surface rounded-2xl border border-gray-100/80 p-5 md:p-8 mb-8 md:mb-10 reveal-hidden ${points.isVisible ? 'reveal-visible' : ''}`}>
-            <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-accent/30 absolute top-4 right-4 md:top-6 md:right-6" />
             <p className="text-[17px] md:text-xl font-bold text-prussian leading-relaxed pr-6 md:pr-8">
-              "I don't just build dashboards.
-              <br className="hidden sm:block" />
-              I build the data foundations
-              <br className="hidden sm:block" />
-              <span className="text-gradient">that make dashboards trustworthy.</span>"
+              "I am early-career, but I think in systems: source data, models, quality checks, dashboards, and the people who use them."
             </p>
           </div>
 
@@ -67,14 +62,14 @@ export function WhyMe({ onBookCall }: WhyMeProps) {
           {/* CTAs */}
           <div ref={cta.ref} className={`reveal-hidden ${cta.isVisible ? 'reveal-visible' : ''}`}>
             <p className="text-[13px] md:text-[14px] text-gray-400 mb-5 leading-relaxed">
-              If this sounds like the kind of data profile your team needs, let's talk — or review my resume for a quick overview.
+              For a quick screen, you can review my resume or schedule a short recruiter intro.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-2.5">
               <button
                 onClick={onBookCall}
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 md:px-7 md:py-4 btn-primary text-prussian font-semibold text-[14px] md:text-[15px] rounded-full shadow-xl shadow-accent/15"
               >
-                Book a Call
+                Schedule a Recruiter Intro
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>
               <a
@@ -83,7 +78,7 @@ export function WhyMe({ onBookCall }: WhyMeProps) {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 md:px-7 md:py-4 border border-gray-200 text-prussian/75 font-semibold text-[14px] md:text-[15px] rounded-full transition-all duration-200 hover:bg-prussian/[0.02] active:scale-[0.97]"
               >
-                Open Resume
+                View Resume
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </a>
             </div>
@@ -99,28 +94,28 @@ const APPROACH_PHASES = [
     phase: 'Discover',
     color: 'bg-blue-500',
     steps: [
-      { num: 1, label: 'Understand the business problem', desc: 'Align with stakeholders on goals, constraints and success criteria.' },
-      { num: 2, label: 'Identify data sources', desc: 'Map available systems, APIs, databases and data quality.' },
-      { num: 3, label: 'Design the data flow', desc: 'Architect the pipeline from source to analytics layer.' },
+      { num: 1, label: 'Understand the business problem', desc: 'Align with stakeholders on goals, constraints, and success criteria.' },
+      { num: 2, label: 'Identify data sources', desc: 'Map available systems, APIs, databases, and data quality issues.' },
+      { num: 3, label: 'Design the data flow', desc: 'Design the pipeline from source systems to the analytics layer.' },
     ],
   },
   {
     phase: 'Build',
     color: 'bg-accent',
     steps: [
-      { num: 4, label: 'Ingest reliably', desc: 'Connect sources with error handling and retry logic.' },
-      { num: 5, label: 'Transform & model', desc: 'Build staging, fact, dimension and mart layers with dbt.' },
-      { num: 6, label: 'Add quality checks', desc: 'Implement tests for uniqueness, completeness and freshness.' },
-      { num: 7, label: 'Orchestrate workflows', desc: 'Schedule and coordinate every step with Dagster or Airflow.' },
+      { num: 4, label: 'Ingest reliably', desc: 'Connect sources with basic error handling and retry logic.' },
+      { num: 5, label: 'Transform & model', desc: 'Build staging, fact, dimension, and mart layers with dbt.' },
+      { num: 6, label: 'Add quality checks', desc: 'Implement tests for uniqueness, completeness, and freshness.' },
+      { num: 7, label: 'Orchestrate workflows', desc: 'Schedule and coordinate workflow steps with Dagster or Airflow.' },
     ],
   },
   {
     phase: 'Deliver',
     color: 'bg-emerald-500',
     steps: [
-      { num: 8, label: 'Monitor failures', desc: 'Alert on pipeline issues before stakeholders notice.' },
-      { num: 9, label: 'Deliver dashboards', desc: 'Build BI layers that answer real business questions.' },
-      { num: 10, label: 'Document & iterate', desc: 'Maintain data dictionaries and improve based on feedback.' },
+      { num: 8, label: 'Monitor failures', desc: 'Monitor pipeline issues before they affect reporting.' },
+      { num: 9, label: 'Deliver dashboards', desc: 'Build BI reports that answer real business questions.' },
+      { num: 10, label: 'Document & iterate', desc: 'Maintain documentation and improve based on feedback.' },
     ],
   },
 ];
@@ -134,10 +129,10 @@ export function Approach() {
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
           <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Method</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
-            My data engineering approach
+            My project approach
           </h2>
           <p className="text-[14px] md:text-base text-gray-500 leading-relaxed">
-            Every project follows a proven three-phase structure — from discovery to production.
+            I use a practical three-phase structure to understand the problem, build the data workflow, and deliver usable reporting.
           </p>
         </div>
 

@@ -1,5 +1,6 @@
-import { Database, Layers, BarChart3, ShieldCheck, Workflow, TestTube, GitBranch, ArrowRight } from 'lucide-react';
+import { Database, Layers, BarChart3, Workflow, TestTube, GitBranch, ArrowRight } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import renderTechnologyIcon from '../lib/technologyCatalog';
 
 interface ServicesProps {
   onBookCall?: () => void;
@@ -9,44 +10,64 @@ const SERVICES = [
   {
     icon: Database,
     title: 'Data Engineering',
-    desc: 'Reliable ELT pipelines that connect data sources, automate workflows and create clean foundations.',
-    bullets: ['ELT/ETL pipeline design', 'Multi-source integration', 'Workflow orchestration', 'Clean data foundations'],
-    tools: ['Python', 'SQL', 'Airbyte', 'DLT', 'Fivetran'],
-    value: 'Pipelines your team can depend on.',
+    desc: 'I can support ELT pipelines that connect data sources, automate recurring workflows, and prepare clean data for analysis.',
+    bullets: [
+      'ELT/ETL pipeline design',
+      'Multi-source integration',
+      'Workflow orchestration',
+      'Clean handoff to analytics',
+    ],
+    tools: [
+      'Airbyte', // Ingestion layer
+      'Python', // Processing layer
+      'Dagster', // Orchestration layer
+      'Snowflake', // Storage layer
+    ],
+    value: 'Focus: maintainable pipelines and clear analytics handoffs.',
   },
   {
     icon: Layers,
     title: 'Analytics Engineering',
-    desc: 'Raw data transformed into documented, tested and business-ready models with dbt and SQL.',
-    bullets: ['SQL transformation design', 'dbt models and testing', 'Documentation & lineage', 'Semantic layer modeling'],
-    tools: ['dbt', 'SQL', 'Snowflake', 'Data Modeling'],
-    value: 'Models that are documented, tested and maintainable.',
+    desc: 'I model raw data into documented, tested SQL and dbt layers that analysts and BI tools can use.',
+    bullets: [
+      'SQL transformation design',
+      'dbt models and testing',
+      'Documentation & lineage',
+      'Dimensional modeling',
+    ],
+    tools: [
+      'dbt', // Transformation layer
+      'SQL', // Modeling layer
+      'Snowflake', // Warehouse layer
+      'Soda', // Testing layer
+    ],
+    value: 'Focus: tested models, documentation, and clear lineage.',
   },
   {
     icon: BarChart3,
     title: 'BI & Dashboards',
-    desc: 'Dashboards that help stakeholders monitor KPIs and make faster, data-driven decisions.',
-    bullets: ['KPI dashboard design', 'Interactive reporting', 'Role-specific views', 'Automated distribution'],
-    tools: ['Power BI', 'Looker', 'DAX', 'SQL'],
-    value: 'Dashboards that drive decisions.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Data Quality',
-    desc: 'Checks, monitoring and documentation to make data systems trustworthy and production-ready.',
-    bullets: ['Quality validation', 'Pipeline monitoring', 'Data dictionaries', 'Incident detection'],
-    tools: ['Great Expectations', 'Elementary', 'Datadog'],
-    value: 'Data systems you can trust.',
+    desc: 'I build Power BI and Metabase dashboards that help teams monitor KPIs and reduce manual reporting effort.',
+    bullets: [
+      'KPI dashboard design',
+      'Interactive reporting',
+      'Role-specific views',
+      'Automated reporting flows',
+    ],
+    tools: [
+      'Power BI', // Visualization layer
+      'Metabase', // Self-service analytics layer
+    ],
+    value: 'Focus: clear KPIs and stakeholder-friendly reporting.',
   },
 ];
 
 const STACK_GROUPS = [
-  { title: 'Build Pipelines', desc: 'Ingest & connect', tools: ['Python', 'SQL', 'Airbyte', 'DLT', 'Fivetran'], icon: Database },
-  { title: 'Model Data', desc: 'Transform & document', tools: ['dbt', 'Snowflake', 'Data Modeling'], icon: Layers },
-  { title: 'Orchestrate', desc: 'Schedule & automate', tools: ['Dagster', 'Airflow'], icon: Workflow },
-  { title: 'Ensure Quality', desc: 'Validate & monitor', tools: ['Great Expectations', 'Elementary', 'Datadog'], icon: TestTube },
-  { title: 'Deliver Insights', desc: 'Visualize & decide', tools: ['Power BI', 'Looker'], icon: BarChart3 },
-  { title: 'Ship Reliably', desc: 'Version & deploy', tools: ['Git', 'GitHub Actions', 'Docker', 'CI/CD'], icon: GitBranch },
+  { title: 'Build Pipelines', desc: 'Ingest & connect', tools: ['Python', 'SQL', 'Airbyte', 'dlt'], icon: Database },
+  { title: 'Model Data', desc: 'Transform & document', tools: ['dbt', 'Snowflake'], icon: Layers },
+  { title: 'Orchestrate', desc: 'Schedule & automate', tools: ['Dagster'], icon: Workflow },
+  { title: 'Ensure Quality', desc: 'Test & validate', tools: ['Great Expectations', 'Soda'], icon: TestTube },
+  { title: 'Deliver Insights', desc: 'Visualize & decide', tools: ['Power BI', 'Metabase'], icon: BarChart3 },
+  { title: 'Ship Reliably', desc: 'Version & deploy', tools: ['Git', 'GitHub Actions', 'Docker'], icon: GitBranch },
 ];
 
 export function Services({ onBookCall }: ServicesProps) {
@@ -56,12 +77,12 @@ export function Services({ onBookCall }: ServicesProps) {
     <section className="bg-surface section-mobile">
       <div className="max-w-[1120px] mx-auto px-5 md:px-8">
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
-          <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Services</p>
+          <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Capabilities</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
-            How I help data teams
+            Where I can contribute
           </h2>
           <p className="text-[14px] md:text-base text-gray-500 leading-relaxed">
-            From raw data to trusted insights — every layer of the modern data stack.
+            Practical areas where I can support a junior or early-career data role.
           </p>
         </div>
 
@@ -88,9 +109,12 @@ export function Services({ onBookCall }: ServicesProps) {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex flex-wrap gap-1 pt-3 border-t border-gray-50 mb-3">
+                  <div className="flex flex-wrap gap-2 pt-3 border-t border-gray-50 mb-3">
                     {s.tools.map((t) => (
-                      <span key={t} className="px-2 py-0.5 text-[10px] md:text-[11px] font-medium text-prussian/45 bg-prussian/[0.03] rounded">{t}</span>
+                      <span key={t} className="inline-flex items-center gap-2 px-2 py-1 text-[10px] md:text-[11px] font-medium text-prussian/45 bg-prussian/[0.03] rounded">
+                        <span className="w-4 h-4">{renderTechnologyIcon(t, { className: 'w-4 h-4' })}</span>
+                        <span className="truncate max-w-[6rem]">{t}</span>
+                      </span>
                     ))}
                   </div>
                   <p className="text-[12px] text-accent font-semibold">{s.value}</p>
@@ -100,10 +124,10 @@ export function Services({ onBookCall }: ServicesProps) {
                 {onBookCall && (
                   <div className="mt-4 pt-3 border-t border-gray-50">
                     <button
-                      onClick={onBookCall}
+                      onClick={() => document.querySelector('#case-studies')?.scrollIntoView({ behavior: 'smooth' })}
                       className="group inline-flex items-center gap-1.5 text-[12px] md:text-[13px] font-semibold text-prussian/40 hover:text-accent transition-colors"
                     >
-                      Learn more
+                      See related work
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                     </button>
                   </div>
@@ -128,10 +152,10 @@ export function Stack() {
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
           <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Stack</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-white tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
-            Tools I use daily
+            Tools I work with
           </h2>
           <p className="text-[14px] md:text-base text-white/40 leading-relaxed">
-            Every tool chosen with one goal: turning raw data into reliable, documented, business-ready analytics.
+            Tools I use across internship work, portfolio projects, and hands-on practice for ingestion, modeling, orchestration, BI, quality, and delivery.
           </p>
         </div>
 
@@ -153,9 +177,12 @@ export function Stack() {
                     <p className="text-[10px] md:text-[11px] text-white/25">{g.desc}</p>
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-1">
+                <div className="flex flex-wrap gap-2">
                   {g.tools.map((t) => (
-                    <span key={t} className="px-2 py-0.5 text-[11px] md:text-[12px] font-medium text-white/55 bg-white/[0.05] rounded-md">{t}</span>
+                    <span key={t} className="inline-flex items-center gap-2 px-2 py-1 text-[11px] md:text-[12px] font-medium text-white/75 bg-white/[0.04] rounded-md">
+                      <span className="w-4 h-4">{renderTechnologyIcon(t, { className: 'w-4 h-4' })}</span>
+                      <span className="truncate max-w-[8rem]">{t}</span>
+                    </span>
                   ))}
                 </div>
               </div>

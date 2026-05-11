@@ -5,10 +5,9 @@ const SETRAG_LOGO = 'https://mobile.setrag.ga/images/logo-setrag.png';
 const UC_LOGO = 'https://cdn-flbag.nitrocdn.com/lHRvxOluTwiwfOjFRNeqQHYYVasaauTG/assets/images/optimized/rev-9ea3631/honoris.net/wp-content/uploads/2021/07/UC.png';
 
 const LOGOS: Record<string, string> = {
-  'Power BI': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_powerbi_seeker-logo%-C-B612D9897C-seeklogo_com.png/1200px-Microsoft_powerbi_seeker-logo%-C-B612D9897C-seeklogo_com.png',
+  'Power BI': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/3840px-New_Power_BI_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail',
   Python: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
-  SQL: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png',
-  'Power Automate': 'https://img.icons8.com/color/480/power-automate.png',
+  'Power Automate': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Microsoft_Power_Automate.svg/1280px-Microsoft_Power_Automate.svg.png',
   ETL: '',
   DAX: '',
   Edureka: 'https://cloud.shopback.com/c_scale,c_auto,q_70,f_webp/media-production-aps1/D_uM6eCxnXQ/aHR0cHM6Ly9pbWFnZXMuYmFubmVyYmVhci5jb20vZGlyZWN0L0VHQnFwQVo1T2U5MTg5VkROSi9yZXF1ZXN0cy8wMDAvMDQ5LzA3OC8zNjAvYmtuQWpONGU3NjMxbDRMVllYUFJLeGxEOC85YTk0ZWEwZjM5NTFjNzkxNWQxZDNjZjA2NGVhYTI2Y2VhZmQ4ZWYzLnBuZw.jpg',
@@ -21,32 +20,31 @@ const LOGOS: Record<string, string> = {
 const TOOL_FALLBACKS: Record<string, string> = {
   'Power BI': '#F2C811',
   Python: '#3776AB',
-  SQL: '#CC2927',
   'Power Automate': '#0066FF',
   ETL: '#14213d',
   DAX: '#14213d',
 };
 
-const TOOLS_USED = ['Power BI', 'Python', 'SQL', 'Power Automate', 'ETL', 'DAX'];
+const TOOLS_USED = ['Power BI', 'Python', 'Power Automate'];
 
 const RESULTS = [
-  'Manual reporting significantly reduced through automation',
-  'Operational KPIs became easier to monitor in near real time',
-  'Stakeholders gained a single and clearer reporting experience',
+  'Recurring reporting time reduced by up to 70%',
+  'Operational KPI monitoring became easier to review',
+  'Dashboards gave teams clearer visibility into daily activity',
 ];
 
 const EDUCATION = [
   {
-    degree: 'Mast\u00e8re Professionnel en Ing\u00e9nierie en IA',
-    school: 'Universit\u00e9 Centrale Tunisie',
-    period: '2025 \u2014 2027',
+    degree: "Professional Master's in AI Engineering",
+    school: 'Université Centrale Tunisie',
+    period: '2025–2027',
     status: 'In progress',
     logo: UC_LOGO,
   },
   {
-    degree: 'Licence en Big Data et Analyse de Donn\u00e9es',
-    school: 'Universit\u00e9 Centrale Tunisie',
-    period: '2022 \u2014 2025',
+    degree: "Bachelor's Degree in Big Data and Data Analytics",
+    school: 'Université Centrale Tunisie',
+    period: '2022–2025',
     status: 'Completed',
     logo: UC_LOGO,
   },
@@ -59,7 +57,7 @@ const CERTIFICATIONS = [
   { name: 'dbt Fundamentals', issuer: 'DataCamp', date: '2026' },
   { name: 'dlt Fundamentals', issuer: 'dltHub', date: '2026' },
   { name: 'Data Engineering with Apache Airflow', issuer: 'LinkedIn', date: '2024' },
-  { name: 'AWS Academy \u2014 Cloud Foundations', issuer: 'AWS', date: '2024' },
+  { name: 'AWS Academy - Cloud Foundations', issuer: 'AWS', date: '2024' },
 ];
 
 export function Experience() {
@@ -73,10 +71,10 @@ export function Experience() {
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
           <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Experience & Credentials</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
-            Proven where it matters
+            Early-career profile with hands-on delivery experience
           </h2>
           <p className="text-[14px] md:text-base text-gray-500 leading-relaxed">
-            Real company impact, structured education, and 7 industry certifications backing my expertise.
+            Internship impact at SETRAG, a data and AI education path, and 7 certifications across the modern data stack.
           </p>
         </div>
 
@@ -102,9 +100,9 @@ export function Experience() {
                 <div className="mb-5 md:mb-6">
                   <h3 className="text-xl md:text-2xl font-bold text-prussian">SETRAG</h3>
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-[13px] md:text-[14px] text-gray-500">
-                    <span className="font-medium text-prussian">Data Analyst</span>
+                    <span className="font-medium text-prussian">Data Analyst Intern</span>
                     <span className="text-gray-300">|</span>
-                    <span>Mar 2025 \u2014 Jun 2025</span>
+                    <span>March 2025 – June 2025</span>
                     <span className="text-gray-300">|</span>
                     <span className="flex items-center gap-1"><MapPin className="w-3 h-3" /> Libreville, Gabon</span>
                   </div>
@@ -112,7 +110,7 @@ export function Experience() {
 
                 {/* Summary */}
                 <p className="text-[14px] md:text-[15px] text-prussian font-medium leading-relaxed mb-6 md:mb-8">
-                  Operational reporting transformed into automated, trusted KPI monitoring.
+                  During my internship, I helped automate recurring KPI reporting for operational teams, contributing to a reduction of up to 70% in manual reporting time.
                 </p>
 
                 {/* Challenge / Solution / Results */}
@@ -120,13 +118,13 @@ export function Experience() {
                   <div>
                     <p className="text-[10px] md:text-[11px] font-semibold text-accent uppercase tracking-widest mb-1.5">Challenge</p>
                     <p className="text-[13px] md:text-[14px] text-gray-600 leading-relaxed">
-                      Reporting workflows were manual, fragmented and hard to scale across stakeholders needing consistent operational visibility.
+                      Reporting workflows were manual and fragmented, making recurring KPI tracking slow for operational teams.
                     </p>
                   </div>
                   <div>
                     <p className="text-[10px] md:text-[11px] font-semibold text-accent uppercase tracking-widest mb-1.5">Solution</p>
                     <p className="text-[13px] md:text-[14px] text-gray-600 leading-relaxed">
-                      Led dashboarding and reporting improvements for operational teams by structuring KPI tracking and reducing repetitive manual work.
+                      Structured KPI tracking, built Power BI dashboards, and automated repetitive reporting steps using Python and Power Automate.
                     </p>
                   </div>
                   <div>
@@ -171,7 +169,7 @@ export function Experience() {
             {/* Education */}
             <div className={`bg-white rounded-2xl border border-gray-100/80 p-5 md:p-7 reveal-hidden ${certs.isVisible ? 'reveal-visible' : ''}`}>
               <div className="flex items-center gap-2.5 mb-5">
-                <img src={UC_LOGO} alt="Universit\u00e9 Centrale" className="w-8 h-8 rounded-lg object-contain" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                <img src={UC_LOGO} alt="Université Centrale" className="w-8 h-8 rounded-lg object-contain" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                 <h3 className="text-[15px] md:text-base font-bold text-prussian">Education</h3>
               </div>
               <div className="space-y-4">
@@ -198,7 +196,7 @@ export function Experience() {
                 </div>
                 <div>
                   <h3 className="text-[15px] md:text-base font-bold text-prussian">7 Certifications</h3>
-                  <p className="text-[11px] text-gray-400">Verified credentials from industry leaders</p>
+                  <p className="text-[11px] text-gray-400">Credentials across dbt, SQL, Airflow, AWS, dlt, and data engineering</p>
                 </div>
               </div>
               <div className="space-y-2">

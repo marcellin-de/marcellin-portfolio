@@ -44,11 +44,10 @@ export default function Navbar({ onBookCall }: NavbarProps) {
       {scrolled && <div className="scroll-progress" style={{ width: `${progress}%` }} />}
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 safe-top ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 safe-top ${scrolled
             ? 'bg-white/80 backdrop-blur-2xl shadow-[0_1px_0_0_rgba(0,0,0,0.04)]'
             : 'bg-transparent'
-        }`}
+          }`}
       >
         <div className="max-w-[1120px] mx-auto px-5 md:px-8">
           <div className="flex items-center justify-between h-14 md:h-14">
@@ -75,11 +74,10 @@ export default function Navbar({ onBookCall }: NavbarProps) {
                 <button
                   key={item.href}
                   onClick={() => go(item.href)}
-                  className={`px-3 py-2 text-[13px] font-medium rounded-full transition-all duration-200 ${
-                    scrolled
+                  className={`px-3 py-2 text-[13px] font-medium rounded-full transition-all duration-200 ${scrolled
                       ? 'text-prussian/55 hover:text-prussian hover:bg-prussian/[0.04]'
                       : 'text-white/55 hover:text-white hover:bg-white/[0.06]'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -88,16 +86,15 @@ export default function Navbar({ onBookCall }: NavbarProps) {
                 onClick={onBookCall}
                 className="ml-2.5 btn-primary px-5 py-2 text-prussian text-[13px] font-semibold rounded-full"
               >
-                Book a Call
+                Contact
               </button>
             </div>
 
             {/* Mobile toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`md:hidden w-11 h-11 flex items-center justify-center rounded-full transition-colors -mr-2 ${
-                scrolled ? 'text-prussian hover:bg-gray-100' : 'text-white hover:bg-white/10'
-              }`}
+              className={`md:hidden w-11 h-11 flex items-center justify-center rounded-full transition-colors -mr-2 ${scrolled ? 'text-prussian hover:bg-gray-100' : 'text-white hover:bg-white/10'
+                }`}
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -126,7 +123,7 @@ export default function Navbar({ onBookCall }: NavbarProps) {
                   onClick={() => { setMobileOpen(false); onBookCall(); }}
                   className="w-full py-3.5 btn-primary text-prussian text-[15px] font-semibold rounded-xl text-center"
                 >
-                  Book a Call
+                  Contact
                 </button>
               </div>
             </div>

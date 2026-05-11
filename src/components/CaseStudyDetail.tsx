@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { ArrowRight, ArrowLeft, CheckCircle2, Layers, Database, TestTube, BarChart3, GitBranch, Cog } from 'lucide-react';
+import { ArrowRight, ArrowLeft, CheckCircle2, Layers, Database, TestTube, BarChart3, GitBranch, Cog, ExternalLink, Star, GitFork } from 'lucide-react';
 
 interface CaseStudyDetailProps {
   caseStudy: number | null;
@@ -11,6 +11,13 @@ interface DetailData {
   title: string;
   tagline: string;
   cover: string;
+  repo: {
+    name: string;
+    url: string;
+    stars: number;
+    forks: number;
+    language: string;
+  };
   context: string;
   problem: string;
   challenge: string;
@@ -25,18 +32,25 @@ interface DetailData {
 const DETAILS: Record<number, DetailData> = {
   0: {
     title: 'CRM Sales Analytics Platform',
-    tagline: 'End-to-end B2B CRM analytics \u2014 from raw data to trusted business reporting',
+    tagline: 'Portfolio analytics engineering project using Snowflake, dbt, SQL, Python, and Power BI to model CRM data and deliver sales reporting.',
     cover: '/images/case-crm-sales.jpg',
-    context: 'A simulation of how a B2B company can transform raw CRM data into reliable business reporting. This project demonstrates the full data engineering lifecycle: from data generation and ingestion through transformation and modeling to BI delivery.',
-    problem: 'Sales teams in B2B companies often operate without a unified view of their pipeline. Revenue data lives in scattered spreadsheets, deal stages are tracked manually, and leadership makes decisions based on incomplete or outdated information. There is no single source of truth for sales performance.',
-    challenge: 'Building a complete data platform that unifies CRM data into a clean, documented and analytics-ready foundation \u2014 with tested transformations, a proper dimensional model, and dashboards that stakeholders can actually trust.',
+    repo: {
+      name: 'crm-sales-analytics-platform',
+      url: 'https://github.com/marcellin-de/crm-sales-analytics-platform',
+      stars: 1,
+      forks: 0,
+      language: 'Python',
+    },
+    context: 'A portfolio simulation showing how B2B CRM data can be organized for sales reporting. The project covers synthetic data generation, loading, transformation, dimensional modeling, testing, and BI delivery.',
+    problem: 'Sales teams need clear pipeline, activity, and revenue metrics, but CRM data often becomes difficult to analyze when it is split across sources.',
+    challenge: 'Build a clean analytics layer with staged dbt models, quality tests, and a star schema designed for BI reporting.',
     approach: [
-      { step: 'Generate synthetic CRM data', desc: 'Created realistic B2B sales data with Python \u2014 accounts, contacts, deals, products, and sales activities \u2014 to simulate a production CRM environment.', icon: Database },
+      { step: 'Generate synthetic CRM data', desc: 'Created B2B sales data with Python, including accounts, contacts, deals, products, and sales activities, to simulate a realistic CRM workflow.', icon: Database },
       { step: 'Load into Snowflake', desc: 'Ingested raw CSV files into Snowflake as the cloud data warehouse, establishing a clean raw layer for downstream transformation.', icon: Layers },
-      { step: 'Build dbt transformation models', desc: 'Developed a full dbt project with staging, intermediate, fact, dimension and mart layers \u2014 each with clear documentation and column-level tests.', icon: GitBranch },
+      { step: 'Build dbt transformation models', desc: 'Developed a full dbt project with staging, intermediate, fact, dimension, and mart layers, each with clear documentation and column-level tests.', icon: GitBranch },
       { step: 'Design star schema', desc: 'Modeled a star schema optimized for BI: fact tables for deals and activities, dimension tables for accounts, products, and time.', icon: Database },
-      { step: 'Add dbt quality tests', desc: 'Implemented tests for uniqueness, non-null values, accepted values and referential integrity \u2014 ensuring data quality at every layer.', icon: TestTube },
-      { step: 'Deliver Power BI dashboards', desc: 'Created interactive dashboards for pipeline visibility, revenue trends, deal velocity and sales team performance.', icon: BarChart3 },
+      { step: 'Add dbt quality tests', desc: 'Implemented tests for uniqueness, non-null values, accepted values, and referential integrity, ensuring data quality at every layer.', icon: TestTube },
+      { step: 'Deliver Power BI dashboards', desc: 'Created interactive dashboards for pipeline visibility, revenue trends, deal velocity, and sales team performance.', icon: BarChart3 },
     ],
     architecture: ['Python (Data Generation)', 'Snowflake (Cloud Warehouse)', 'dbt (Transformation & Modeling)', 'Star Schema (Dimensional Design)', 'Power BI (BI & Dashboards)'],
     tools: [
@@ -54,26 +68,33 @@ const DETAILS: Record<number, DetailData> = {
       'Demonstrated full data engineering lifecycle in a single project',
     ],
     proves: [
-      'Full-stack data engineering: ingestion \u2192 transformation \u2192 modeling \u2192 BI',
+      'Full-stack data workflow from ingestion to transformation, modeling, and BI',
       'dbt best practices: staged models, documentation, testing, marts',
       'Dimensional modeling with star schema design',
-      'Production-ready data quality mindset',
+      'Practical data quality mindset',
     ],
-    cta: 'Need this kind of analytics engineering for your sales data?',
+    cta: 'Want to review this sales analytics project during a screening call?',
   },
   1: {
     title: 'Dagster Weather Platform',
-    tagline: 'Production-grade data pipeline with orchestration, quality checks and observability',
+    tagline: 'Portfolio data platform for hourly weather data with Python ingestion, Dagster orchestration, Great Expectations validation, and run monitoring.',
     cover: '/images/case-weather-dagster.jpg',
-    context: 'A weather data platform built to demonstrate production-grade pipeline architecture with modern orchestration, automated quality checks and full observability.',
-    problem: 'Organizations that need weather data for analytics or operations face a common challenge: no reliable, automated system for ingesting, cleaning and serving weather data at scale. Manual processes break, data quality is inconsistent, and failures go undetected.',
-    challenge: 'Designing a production-grade data pipeline that handles ingestion, transformation, quality validation and monitoring \u2014 with proper orchestration so every step runs reliably on schedule.',
+    repo: {
+      name: 'dagster-weather-platform',
+      url: 'https://github.com/marcellin-de/dagster-weather-platform',
+      stars: 1,
+      forks: 0,
+      language: 'Python',
+    },
+    context: 'A weather data platform built to demonstrate pipeline architecture with orchestration, automated quality checks, and run visibility.',
+    problem: 'Weather data needs repeatable ingestion, validation, and monitoring before it can be used reliably downstream.',
+    challenge: 'Design an automated workflow with clear dependencies, validation steps, and failure visibility.',
     approach: [
-      { step: 'Connect to weather API', desc: 'Built a Python-based ingestion layer that pulls weather data from public APIs with error handling and retry logic.', icon: Database },
-      { step: 'Orchestrate with Dagster', desc: 'Configured Dagster as the orchestration engine \u2014 scheduling runs, managing dependencies between assets, and tracking pipeline health.', icon: Cog },
-      { step: 'Validate with Great Expectations', desc: 'Integrated Great Expectations to validate data at every stage: schema checks, range validation, completeness and freshness.', icon: TestTube },
+      { step: 'Connect to weather API', desc: 'Built a Python-based ingestion layer that pulls weather data from public APIs with basic error handling and retry logic.', icon: Database },
+      { step: 'Orchestrate with Dagster', desc: 'Configured Dagster as the orchestration engine for scheduling runs, managing dependencies between assets, and tracking pipeline health.', icon: Cog },
+      { step: 'Validate with Great Expectations', desc: 'Integrated Great Expectations to validate data at every stage: schema checks, range validation, completeness, and freshness.', icon: TestTube },
       { step: 'Store in PostgreSQL', desc: 'Loaded cleaned and validated data into PostgreSQL, structured for downstream analytics consumption.', icon: Database },
-      { step: 'Monitor and alert', desc: 'Built monitoring into Dagster for failure detection, run history and data quality trends over time.', icon: BarChart3 },
+      { step: 'Monitor runs', desc: 'Used Dagster run history and quality checks to make pipeline status easier to inspect.', icon: BarChart3 },
     ],
     architecture: ['Weather API (Source)', 'Python (Ingestion)', 'Dagster (Orchestration)', 'Great Expectations (Quality)', 'PostgreSQL (Storage)'],
     tools: [
@@ -84,68 +105,82 @@ const DETAILS: Record<number, DetailData> = {
       { name: 'PostgreSQL', role: 'Data storage' },
     ],
     outcomes: [
-      'Fully automated weather data pipeline running 24/7',
-      '100% of data passes quality checks before reaching storage',
+      'Scheduled weather data pipeline with repeatable ingestion',
+      'Quality checks before data reaches storage',
       'Dagster orchestration with asset-based architecture',
-      'Monitoring and alerting for pipeline failures',
+      'Run visibility for pipeline failures and validation issues',
     ],
     proves: [
       'Pipeline architecture and orchestration with Dagster',
-      'Data reliability engineering with Great Expectations',
-      'Production-grade monitoring and observability',
+      'Data validation engineering with Great Expectations',
+      'Monitoring and observability basics',
       'Modern data engineering practices',
     ],
-    cta: 'Building data pipelines that need proper orchestration and quality?',
+    cta: 'Want to review this orchestration and data quality project?',
   },
   2: {
     title: 'Marketing Performance Platform',
-    tagline: 'From marketing guesswork to data-driven channel attribution',
+    tagline: 'Analytics project using Maven Fuzzy Factory e-commerce data, dlt, dbt, Dagster, Snowflake, and Metabase to analyze marketing KPIs.',
     cover: '/images/case-marketing-perf.jpg',
-    context: 'A marketing analytics platform that consolidates multi-channel campaign data into a unified model for ROI tracking and channel attribution.',
-    problem: 'Marketing teams spend budget across multiple channels without clear visibility into what works. ROI tracking is manual or nonexistent, channel attribution is guesswork, and budget allocation decisions are based on intuition rather than data.',
-    challenge: 'Consolidating messy multi-channel marketing data into one clean, analytics-ready model \u2014 with clear attribution logic, performance metrics and stakeholder-ready dashboards.',
+    repo: {
+      name: 'marketing-performance-analysis',
+      url: 'https://github.com/marcellin-de/marketing-performance-analysis',
+      stars: 1,
+      forks: 0,
+      language: 'Python',
+    },
+    context: 'A portfolio analytics project using the Maven Fuzzy Factory e-commerce dataset to model marketing performance, conversion behavior, and channel-level KPIs.',
+    problem: 'Marketing teams need consistent campaign, session, and conversion metrics before they can compare ROI across channels.',
+    challenge: 'Model multi-channel data into a clean analytics layer for attribution, conversion, and reporting analysis.',
     approach: [
-      { step: 'Map marketing data sources', desc: 'Identified and mapped all marketing data sources: ad platforms, email campaigns, social media, and web analytics.', icon: Database },
-      { step: 'Build ingestion pipelines', desc: 'Created Python pipelines to extract and consolidate campaign data from multiple sources into a unified raw layer.', icon: Layers },
-      { step: 'Transform with dbt', desc: 'Developed dbt models to clean, standardize and structure marketing data \u2014 with proper attribution logic and performance calculations.', icon: GitBranch },
-      { step: 'Design attribution model', desc: 'Built multi-touch attribution logic that assigns conversion credit across channels based on interaction patterns.', icon: BarChart3 },
-      { step: 'Deliver Power BI dashboards', desc: 'Created dashboards for channel performance, ROI by campaign, attribution breakdown and budget optimization recommendations.', icon: BarChart3 },
+      { step: 'Map marketing entities', desc: 'Mapped the dataset around sessions, campaigns, traffic sources, conversions, and revenue-related metrics.', icon: Database },
+      { step: 'Build ingestion pipelines', desc: 'Created ingestion workflows to consolidate source data into a unified raw layer.', icon: Layers },
+      { step: 'Transform with dbt', desc: 'Developed dbt models to clean, standardize, and structure marketing data, with proper attribution logic and performance calculations.', icon: GitBranch },
+      { step: 'Design attribution logic', desc: 'Built attribution logic to compare channel contribution and conversion paths.', icon: BarChart3 },
+      { step: 'Deliver Metabase dashboards', desc: 'Created dashboards for channel performance, KPI tracking, conversion trends, and reporting review.', icon: BarChart3 },
     ],
-    architecture: ['Multi-channel Sources', 'Python (Ingestion)', 'dbt (Transformation)', 'Attribution Model', 'Power BI (Visualization)'],
+    architecture: ['Maven Dataset', 'dlt (Ingestion)', 'dbt (Transformation)', 'Attribution Model', 'Metabase (Dashboards)'],
     tools: [
-      { name: 'Python', role: 'Data ingestion and processing' },
+      { name: 'dlt', role: 'Data ingestion' },
       { name: 'SQL', role: 'Transformation and analysis' },
       { name: 'dbt', role: 'Data modeling and testing' },
-      { name: 'Power BI', role: 'Dashboard and reporting' },
-      { name: 'Excel', role: 'Source data and validation' },
+      { name: 'Dagster', role: 'Orchestration' },
+      { name: 'Metabase', role: 'Dashboard and reporting' },
     ],
     outcomes: [
       'Unified marketing data model with multi-channel attribution',
       'Clear ROI tracking per channel and campaign',
-      'Data-driven budget allocation recommendations',
-      'Stakeholder-ready dashboards for marketing leadership',
+      'Campaign and conversion reporting views',
+      'Metabase dashboards for channel performance, ROI tracking, and conversion trends',
     ],
     proves: [
       'Analytics engineering with business-aligned modeling',
       'Multi-source data integration and standardization',
       'Attribution logic design and implementation',
-      'Translating marketing questions into data solutions',
+      'Translating marketing questions into modeled metrics and BI-ready reporting',
     ],
-    cta: 'Need marketing analytics you can actually trust?',
+    cta: 'Want to review this marketing analytics project?',
   },
   3: {
     title: 'Vehicle E-Commerce Analytics',
-    tagline: 'Customer insights that directly influenced product strategy',
+    tagline: 'End-to-end vehicle e-commerce analytics project using ingestion, dbt modeling, data quality checks, Snowflake, and BI reporting patterns.',
     cover: '/images/case-ecommerce-vehicle.jpg',
-    context: 'An e-commerce analytics platform for a vehicle marketplace, connecting product, customer and transaction data to deliver actionable business insights.',
-    problem: 'Vehicle e-commerce platforms collect massive amounts of data but struggle to turn it into actionable insights. Customer behavior is opaque, sales patterns are unclear, and product strategy relies on guesswork rather than evidence.',
-    challenge: 'Connecting product, customer and transaction data into a unified analytics model \u2014 with segmentation, trend analysis and insights that directly influence business decisions.',
+    repo: {
+      name: 'vehicle-ecommerce-analytics',
+      url: 'https://github.com/marcellin-de/vehicle-ecommerce-analytics',
+      stars: 1,
+      forks: 0,
+      language: 'Python',
+    },
+    context: 'A vehicle e-commerce analytics project that connects product, customer, and transaction data into a structured model for reporting and analysis.',
+    problem: 'Vehicle marketplace data needs structured product, customer, and transaction models before teams can analyze behavior and sales trends.',
+    challenge: 'Connect product, customer, and transaction entities into a unified analytics model with segmentation, trend analysis, and dashboard-ready outputs.',
     approach: [
-      { step: 'Map e-commerce data', desc: 'Analyzed the e-commerce data landscape: product catalog, user behavior, transactions, and vehicle specifications.', icon: Database },
+      { step: 'Map e-commerce data', desc: 'Analyzed product catalog, user behavior, transactions, and vehicle specifications.', icon: Database },
       { step: 'Build data pipelines', desc: 'Created Python pipelines to extract, clean and load e-commerce data into Snowflake for analysis.', icon: Layers },
       { step: 'Model with dbt', desc: 'Developed dbt models for customer segmentation, product performance, and sales trend analysis with proper testing.', icon: GitBranch },
-      { step: 'Customer segmentation', desc: 'Built segmentation models that classify customers by behavior, purchase patterns and value tiers.', icon: Database },
-      { step: 'Deliver analytics', desc: 'Created Power BI dashboards for customer insights, product performance, sales trends and inventory optimization.', icon: BarChart3 },
+      { step: 'Customer segmentation', desc: 'Built segmentation logic that classifies customers by behavior, purchase patterns, and value tiers.', icon: Database },
+      { step: 'Deliver analytics', desc: 'Created Power BI dashboards for customer insights, product performance, sales trends, and inventory review.', icon: BarChart3 },
     ],
     architecture: ['E-commerce Platform (Source)', 'Python (Ingestion)', 'Snowflake (Warehouse)', 'dbt (Modeling)', 'Power BI (Dashboards)'],
     tools: [
@@ -158,16 +193,16 @@ const DETAILS: Record<number, DetailData> = {
     outcomes: [
       'Customer segmentation model with behavior-based classifications',
       'Sales trend analysis with seasonal and product-level breakdowns',
-      'Product performance dashboards influencing inventory decisions',
+      'Product performance dashboards for inventory review',
       'Unified analytics model connecting all e-commerce data sources',
     ],
     proves: [
-      'End-to-end analytics from raw data to strategic decisions',
-      'Customer segmentation and behavioral analysis',
-      'Business intelligence with measurable impact',
+      'End-to-end analytics from raw data to reporting outputs',
+      'Customer segmentation and behavioral analytics',
+      'Business intelligence with clear KPI structure',
       'Modern data stack with dbt + Snowflake + Power BI',
     ],
-    cta: 'Need e-commerce analytics that drive product decisions?',
+    cta: 'Want to review this e-commerce analytics project?',
   },
 };
 
@@ -215,7 +250,7 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
                 onClick={onBookCall}
                 className="px-4 py-1.5 md:px-5 md:py-2 bg-accent hover:bg-accent-hover text-prussian text-[12px] md:text-[13px] font-semibold rounded-full transition-all active:scale-[0.97]"
               >
-                Book a Call
+                Recruiter Intro
               </button>
             </div>
           </div>
@@ -233,6 +268,21 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
 
           {/* Content */}
           <div className="max-w-[900px] mx-auto px-5 md:px-8 py-8 md:py-14">
+            <div className="flex flex-wrap items-center gap-3 mb-6 text-[12px] text-prussian/50">
+              <a
+                href={detail.repo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-accent hover:text-accent-hover transition-colors"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+                {detail.repo.name}
+              </a>
+              <span className="inline-flex items-center gap-1"><Star className="w-3.5 h-3.5" /> {detail.repo.stars}</span>
+              <span className="inline-flex items-center gap-1"><GitFork className="w-3.5 h-3.5" /> {detail.repo.forks}</span>
+              <span>{detail.repo.language}</span>
+            </div>
+
             {/* Context */}
             <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed mb-10 md:mb-14">{detail.context}</p>
 
@@ -254,18 +304,18 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
               <div className="space-y-3 md:space-y-4">
                 {detail.approach.map((a, i) => (
 
-                    <div key={a.step} className="flex items-start gap-3 md:gap-4">
-                      <div className="flex flex-col items-center flex-shrink-0">
-                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-accent/10 flex items-center justify-center">
-                          <span className="text-[13px] md:text-[14px] font-bold text-accent">{i + 1}</span>
-                        </div>
-                        {i < detail.approach.length - 1 && <div className="w-px h-3 md:h-5 bg-accent/10 mt-1" />}
+                  <div key={a.step} className="flex items-start gap-3 md:gap-4">
+                    <div className="flex flex-col items-center flex-shrink-0">
+                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                        <span className="text-[13px] md:text-[14px] font-bold text-accent">{i + 1}</span>
                       </div>
-                      <div className="pt-1">
-                        <p className="text-[13px] md:text-[15px] font-semibold text-prussian">{a.step}</p>
-                        <p className="text-[12px] md:text-[14px] text-gray-500 leading-relaxed mt-0.5">{a.desc}</p>
-                      </div>
+                      {i < detail.approach.length - 1 && <div className="w-px h-3 md:h-5 bg-accent/10 mt-1" />}
                     </div>
+                    <div className="pt-1">
+                      <p className="text-[13px] md:text-[15px] font-semibold text-prussian">{a.step}</p>
+                      <p className="text-[12px] md:text-[14px] text-gray-500 leading-relaxed mt-0.5">{a.desc}</p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -277,7 +327,7 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
                 {detail.architecture.map((item, i) => (
                   <div key={item} className="flex items-center gap-2">
                     <span className="px-3 py-1.5 md:px-4 md:py-2 text-[12px] md:text-[13px] font-medium text-prussian bg-prussian/[0.04] rounded-lg">{item}</span>
-                    {i < detail.architecture.length - 1 && <span className="text-accent/30 text-[16px]">&rarr;</span>}
+                    {i < detail.architecture.length - 1 && <span className="text-accent/40 text-[11px] font-semibold uppercase tracking-wider">to</span>}
                   </div>
                 ))}
               </div>
@@ -329,7 +379,7 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
                 onClick={onBookCall}
                 className="group inline-flex items-center gap-2.5 px-6 py-3.5 md:px-7 md:py-4 bg-accent hover:bg-accent-hover text-prussian font-semibold text-[14px] md:text-[15px] rounded-full transition-all shadow-xl shadow-accent/15 active:scale-[0.97] md:hover:scale-[1.02]"
               >
-                Let's Discuss This
+                Discuss this project
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>
             </div>
