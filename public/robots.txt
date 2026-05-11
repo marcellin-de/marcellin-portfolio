@@ -2,8 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /.env
+Disallow: /.git
 
 Sitemap: https://marcellin.tech/sitemap.xml
-
-# Crawl delay to be nice to the server
-Crawl-delay: 1

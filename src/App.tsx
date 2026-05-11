@@ -17,16 +17,18 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased">
       <Navbar onBookCall={openBooking} />
-      <Hero onBookCall={openBooking} />
-      <CaseStudies onBookCall={openBooking} />
-      <Experience />
-      <Services onBookCall={openBooking} />
-      <Stack />
-      <WhyMe onBookCall={openBooking} />
-      <Approach />
-      <About onBookCall={openBooking} />
-      <RecruiterSnapshot onBookCall={openBooking} />
-      <FinalCTA onBookCall={openBooking} />
+      <main role="main">
+        <Hero onBookCall={openBooking} />
+        <CaseStudies onBookCall={openBooking} />
+        <Experience />
+        <Services onBookCall={openBooking} />
+        <Stack />
+        <WhyMe onBookCall={openBooking} />
+        <Approach />
+        <About onBookCall={openBooking} />
+        <RecruiterSnapshot onBookCall={openBooking} />
+        <FinalCTA onBookCall={openBooking} />
+      </main>
       <Footer onBookCall={openBooking} />
       <BackToTop />
     </div>

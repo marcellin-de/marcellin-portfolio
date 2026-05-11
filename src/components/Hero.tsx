@@ -99,6 +99,8 @@ export default function Hero({ onBookCall }: HeroProps) {
                 <img
                   src={PROFILE_PHOTO}
                   alt="Marcellin DJAMBO profile photo"
+                  loading="lazy"
+                  decoding="async"
                   className="relative w-24 h-24 md:w-[160px] md:h-[160px] rounded-full object-cover border-[3px] border-black/40"
                 />
                 {/* Status dot with ping */}

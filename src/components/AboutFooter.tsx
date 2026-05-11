@@ -141,7 +141,9 @@ export function FinalCTA({ onBookCall }: SectionProps) {
               <div className="absolute -inset-[1.5px] rounded-full bg-gradient-to-br from-accent/30 to-accent/10" />
               <img
                 src={PROFILE_PHOTO}
-                alt="Marcellin DJAMBO"
+                alt="Marcellin DJAMBO - Data & Analytics Engineer"
+                loading="lazy"
+                decoding="async"
                 className="relative w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-prussian"
               />
               <div className="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-prussian" />
