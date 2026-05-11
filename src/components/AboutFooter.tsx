@@ -184,7 +184,7 @@ export function Footer({ onBookCall }: SectionProps) {
             <p className="text-[14px] md:text-[15px] font-bold text-white tracking-tight">
               Marcellin<span className="text-accent">.</span>
             </p>
-            <p className="text-[12px] md:text-[13px] text-white/25 mt-0.5">Early-career Data & Analytics Engineer, Tunis, Tunisia</p>
+            <p className="text-[11px] md:text-[13px] text-white/40 mt-0.5">Early-career Data & Analytics Engineer, Tunis, Tunisia</p>
           </div>
 
           <div className="flex items-center gap-6">
