@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface SectionProps {
@@ -39,74 +39,12 @@ export function About({ onBookCall: _onBookCall }: SectionProps) {
 export function RecruiterSnapshot({ onBookCall }: SectionProps) {
   const badgeRef = useRef<HTMLDivElement>(null);
   const section = useScrollReveal();
-  const [badgeReady, setBadgeReady] = useState(false);
 
   useEffect(() => {
-    let cancelled = false;
-
-    const parseBadge = () => {
-      const linkedin = (window as Window & {
-        IN?: { parse?: (element?: Element | Document) => void };
-      }).IN;
-
-      if (!badgeRef.current || !linkedin?.parse) return false;
-
-      linkedin.parse(badgeRef.current);
-      return true;
-    };
-
-    const ensureScript = () => {
-      const existingScript = document.querySelector<HTMLScriptElement>('script[data-linkedin-badge="true"]');
-
-      if (existingScript) {
-        if (parseBadge()) {
-          setBadgeReady(true);
-          return;
-        }
-
-        const handleLoad = () => {
-          if (cancelled) return;
-          if (parseBadge()) setBadgeReady(true);
-        };
-
-        existingScript.addEventListener('load', handleLoad, { once: true });
-        existingScript.addEventListener('error', () => {
-          if (!cancelled) setBadgeReady(false);
-        }, { once: true });
-        return;
-      }
-
-      const script = document.createElement('script');
-      script.src = 'https://platform.linkedin.com/badges/js/profile.js';
-      script.async = true;
-      script.defer = true;
-      script.type = 'text/javascript';
-      script.dataset.linkedinBadge = 'true';
-      script.onload = () => {
-        if (cancelled) return;
-        if (parseBadge()) setBadgeReady(true);
-      };
-      script.onerror = () => {
-        if (!cancelled) setBadgeReady(false);
-      };
-      document.head.appendChild(script);
-    };
-
-    const timer = window.setTimeout(() => {
-      if (cancelled) return;
-
-      if (parseBadge()) {
-        setBadgeReady(true);
-        return;
-      }
-
-      ensureScript();
-    }, 0);
-
-    return () => {
-      cancelled = true;
-      window.clearTimeout(timer);
-    };
+    const timer = setTimeout(() => {
+      if (!badgeRef.current) return;
+    }, 4000);
+    return () => clearTimeout(timer);
   }, []);
 
   const infoCards = [
@@ -153,35 +91,17 @@ export function RecruiterSnapshot({ onBookCall }: SectionProps) {
             <div className="flex flex-col md:flex-row items-center gap-5 md:gap-8">
               {/* Badge */}
               <div ref={badgeRef} className="w-full md:w-auto flex justify-center">
-                {badgeReady ? (
-                  <div
-                    className="badge-base LI-profile-badge"
-                    data-locale="en_US"
-                    data-size="large"
-                    data-theme="light"
-                    data-type="HORIZONTAL"
-                    data-vanity="marcellindjambo"
-                    data-version="v1"
-                  >
-                    <a className="badge-base__link LI-simple-link" href="https://tn.linkedin.com/in/marcellindjambo?trk=profile-badge"></a>
-                  </div>
-                ) : (
-                  <a
-                    href={LINKEDIN_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex w-full max-w-[360px] items-center gap-4 rounded-2xl border border-white/[0.08] bg-white/[0.04] px-4 py-4 text-left shadow-lg shadow-black/10 transition-colors hover:bg-white/[0.06]"
-                    aria-label="Open LinkedIn profile in a new tab"
-                  >
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#0A66C2] text-white font-bold text-[18px]">
-                      in
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-[13px] font-semibold text-white">LinkedIn</p>
-                      <p className="truncate text-[12px] text-white/45">@marcellindjambo</p>
-                    </div>
-                  </a>
-                )}
+                <div
+                  className="badge-base LI-profile-badge"
+                  data-locale="en_US"
+                  data-size="large"
+                  data-theme="light"
+                  data-type="HORIZONTAL"
+                  data-vanity="marcellindjambo"
+                  data-version="v1"
+                >
+                  <a className="badge-base__link LI-simple-link" href="https://tn.linkedin.com/in/marcellindjambo?trk=profile-badge"></a>
+                </div>
               </div>
             </div>
           </div>
