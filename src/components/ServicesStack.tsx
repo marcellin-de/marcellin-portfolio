@@ -124,10 +124,11 @@ export function Services({ onBookCall }: ServicesProps) {
                 {onBookCall && (
                   <div className="mt-4 pt-3 border-t border-gray-50">
                     <button
-                      onClick={() => document.querySelector('#case-studies')?.scrollIntoView({ behavior: 'smooth' })}
+                      type="button"
+                      onClick={onBookCall}
                       className="group inline-flex items-center gap-1.5 text-[12px] md:text-[13px] font-semibold text-prussian/40 hover:text-accent transition-colors"
                     >
-                      See related work
+                      Learn more
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                     </button>
                   </div>
