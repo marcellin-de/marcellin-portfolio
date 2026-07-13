@@ -1,7 +1,7 @@
 import { MapPin, CheckCircle2 } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
-const SETRAG_LOGO = 'https://mobile.setrag.ga/images/logo-setrag.png';
+const SETRAG_LOGO = 'https://setrag.eramet.com/wp-content/uploads/sites/6/2021/01/Setrag-Eramet-logo-retina.png';
 const UC_LOGO = 'https://cdn-flbag.nitrocdn.com/lHRvxOluTwiwfOjFRNeqQHYYVasaauTG/assets/images/optimized/rev-9ea3631/honoris.net/wp-content/uploads/2021/07/UC.png';
 
 const LOGOS: Record<string, string> = {
