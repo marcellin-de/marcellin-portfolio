@@ -49,7 +49,7 @@ export default function BookingModal({
       >
         <header className="flex items-start justify-between gap-4 border-b border-gray-100 px-4 py-4 sm:px-5">
           <div>
-            <p className="mb-1 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-accent">
+            <p className="mb-1 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-[#d88700]">
               <CalendarClock className="h-3.5 w-3.5" />
               30 min recruiter intro
             </p>
@@ -76,7 +76,7 @@ export default function BookingModal({
 
         <div className="min-h-0 flex-1 bg-surface px-4 py-5 sm:px-5">
           <div className="flex h-full min-h-[260px] flex-col items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-white px-5 py-8 text-center">
-            <p className="text-[13px] font-semibold uppercase tracking-widest text-accent">
+            <p className="text-[13px] font-semibold uppercase tracking-widest text-[#d88700]">
               Open the calendar
             </p>
             <p className="mt-3 max-w-md text-[13px] leading-relaxed text-gray-500 sm:text-[14px]">

@@ -33,7 +33,7 @@ const DETAILS: Record<number, DetailData> = {
   0: {
     title: 'CRM Sales Analytics Platform',
     tagline: 'Portfolio analytics engineering project using Snowflake, dbt, SQL, Python, and Power BI to model CRM data and deliver sales reporting.',
-    cover: '/images/case-crm-sales.jpg',
+    cover: '/images/case-crm-sales.webp',
     repo: {
       name: 'crm-sales-analytics-platform',
       url: 'https://github.com/marcellin-de/crm-sales-analytics-platform',
@@ -78,7 +78,7 @@ const DETAILS: Record<number, DetailData> = {
   1: {
     title: 'Dagster Weather Platform',
     tagline: 'Portfolio data platform for hourly weather data with Python ingestion, Dagster orchestration, Great Expectations validation, and run monitoring.',
-    cover: '/images/case-weather-dagster.jpg',
+    cover: '/images/case-weather-dagster.webp',
     repo: {
       name: 'dagster-weather-platform',
       url: 'https://github.com/marcellin-de/dagster-weather-platform',
@@ -121,7 +121,7 @@ const DETAILS: Record<number, DetailData> = {
   2: {
     title: 'Marketing Performance Platform',
     tagline: 'Analytics project using Maven Fuzzy Factory e-commerce data, dlt, dbt, Dagster, Snowflake, and Metabase to analyze marketing KPIs.',
-    cover: '/images/case-marketing-perf.jpg',
+    cover: '/images/case-marketing-perf.webp',
     repo: {
       name: 'marketing-performance-analysis',
       url: 'https://github.com/marcellin-de/marketing-performance-analysis',
@@ -164,7 +164,7 @@ const DETAILS: Record<number, DetailData> = {
   3: {
     title: 'Vehicle E-Commerce Analytics',
     tagline: 'End-to-end vehicle e-commerce analytics project using ingestion, dbt modeling, data quality checks, Snowflake, and BI reporting patterns.',
-    cover: '/images/case-ecommerce-vehicle.jpg',
+    cover: '/images/case-ecommerce-vehicle.webp',
     repo: {
       name: 'vehicle-ecommerce-analytics',
       url: 'https://github.com/marcellin-de/vehicle-ecommerce-analytics',
@@ -260,7 +260,7 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
             <img src={detail.cover} alt="" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-prussian-dark/90 via-prussian/50 to-prussian/20" />
             <div className="absolute bottom-0 left-0 right-0 p-5 md:p-10 max-w-[900px] mx-auto">
-              <p className="text-[10px] md:text-[11px] font-semibold text-accent/70 uppercase tracking-widest mb-1.5">Case Study</p>
+              <p className="text-[10px] md:text-[11px] font-semibold text-[#d88700]/70 uppercase tracking-widest mb-1.5">Case Study</p>
               <h1 className="text-[22px] md:text-[32px] font-extrabold text-white tracking-[-0.02em] leading-tight">{detail.title}</h1>
               <p className="text-[13px] md:text-[15px] text-white/60 mt-1.5">{detail.tagline}</p>
             </div>
@@ -273,7 +273,7 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
                 href={detail.repo.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-accent hover:text-accent-hover transition-colors"
+                className="inline-flex items-center gap-1.5 text-[#d88700] hover:text-[#b87300] transition-colors"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
                 {detail.repo.name}
@@ -289,25 +289,25 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
             {/* Problem & Challenge */}
             <div className="grid md:grid-cols-2 gap-6 md:gap-10 mb-10 md:mb-14">
               <div>
-                <p className="text-[11px] md:text-[12px] font-semibold text-accent uppercase tracking-widest mb-2">The Problem</p>
+                <p className="text-[11px] md:text-[12px] font-semibold text-[#d88700] uppercase tracking-widest mb-2">The Problem</p>
                 <p className="text-[14px] md:text-[15px] text-gray-600 leading-relaxed">{detail.problem}</p>
               </div>
               <div>
-                <p className="text-[11px] md:text-[12px] font-semibold text-accent uppercase tracking-widest mb-2">The Challenge</p>
+                <p className="text-[11px] md:text-[12px] font-semibold text-[#d88700] uppercase tracking-widest mb-2">The Challenge</p>
                 <p className="text-[14px] md:text-[15px] text-gray-600 leading-relaxed">{detail.challenge}</p>
               </div>
             </div>
 
             {/* My Approach */}
             <div className="mb-10 md:mb-14">
-              <p className="text-[11px] md:text-[12px] font-semibold text-accent uppercase tracking-widest mb-4 md:mb-6">My Approach</p>
+              <p className="text-[11px] md:text-[12px] font-semibold text-[#d88700] uppercase tracking-widest mb-4 md:mb-6">My Approach</p>
               <div className="space-y-3 md:space-y-4">
                 {detail.approach.map((a, i) => (
 
                   <div key={a.step} className="flex items-start gap-3 md:gap-4">
                     <div className="flex flex-col items-center flex-shrink-0">
                       <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-accent/10 flex items-center justify-center">
-                        <span className="text-[13px] md:text-[14px] font-bold text-accent">{i + 1}</span>
+                        <span className="text-[13px] md:text-[14px] font-bold text-[#d88700]">{i + 1}</span>
                       </div>
                       {i < detail.approach.length - 1 && <div className="w-px h-3 md:h-5 bg-accent/10 mt-1" />}
                     </div>
@@ -322,12 +322,12 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
 
             {/* Data Architecture */}
             <div className="mb-10 md:mb-14">
-              <p className="text-[11px] md:text-[12px] font-semibold text-accent uppercase tracking-widest mb-4">Data Architecture</p>
+              <p className="text-[11px] md:text-[12px] font-semibold text-[#d88700] uppercase tracking-widest mb-4">Data Architecture</p>
               <div className="flex flex-wrap items-center gap-2">
                 {detail.architecture.map((item, i) => (
                   <div key={item} className="flex items-center gap-2">
                     <span className="px-3 py-1.5 md:px-4 md:py-2 text-[12px] md:text-[13px] font-medium text-prussian bg-prussian/[0.04] rounded-lg">{item}</span>
-                    {i < detail.architecture.length - 1 && <span className="text-accent/40 text-[11px] font-semibold uppercase tracking-wider">to</span>}
+                    {i < detail.architecture.length - 1 && <span className="text-[#d88700]/40 text-[11px] font-semibold uppercase tracking-wider">to</span>}
                   </div>
                 ))}
               </div>
@@ -335,12 +335,12 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
 
             {/* Tools */}
             <div className="mb-10 md:mb-14">
-              <p className="text-[11px] md:text-[12px] font-semibold text-accent uppercase tracking-widest mb-4">Tools Used</p>
+              <p className="text-[11px] md:text-[12px] font-semibold text-[#d88700] uppercase tracking-widest mb-4">Tools Used</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 md:gap-3">
                 {detail.tools.map((t) => (
                   <div key={t.name} className="bg-surface rounded-xl border border-gray-100/80 p-3 md:p-4">
                     <p className="text-[13px] md:text-[14px] font-semibold text-prussian">{t.name}</p>
-                    <p className="text-[11px] md:text-[12px] text-gray-400 mt-0.5">{t.role}</p>
+                    <p className="text-[11px] md:text-[12px] text-gray-500 mt-0.5">{t.role}</p>
                   </div>
                 ))}
               </div>
@@ -348,11 +348,11 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
 
             {/* Key Outcomes */}
             <div className="mb-10 md:mb-14">
-              <p className="text-[11px] md:text-[12px] font-semibold text-accent uppercase tracking-widest mb-4">Key Outcomes</p>
+              <p className="text-[11px] md:text-[12px] font-semibold text-[#d88700] uppercase tracking-widest mb-4">Key Outcomes</p>
               <div className="space-y-2">
                 {detail.outcomes.map((o) => (
                   <div key={o} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-[18px] h-[18px] text-accent flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-[18px] h-[18px] text-[#d88700] flex-shrink-0 mt-0.5" />
                     <p className="text-[13px] md:text-[14px] text-gray-600 leading-relaxed">{o}</p>
                   </div>
                 ))}
@@ -361,7 +361,7 @@ export default function CaseStudyDetail({ caseStudy, onClose, onBookCall }: Case
 
             {/* What This Proves */}
             <div className="bg-prussian rounded-2xl md:rounded-3xl p-5 md:p-8 mb-10 md:mb-14">
-              <p className="text-[11px] md:text-[12px] font-semibold text-accent uppercase tracking-widest mb-3">What This Proves</p>
+              <p className="text-[11px] md:text-[12px] font-semibold text-[#d88700] uppercase tracking-widest mb-3">What This Proves</p>
               <div className="space-y-2">
                 {detail.proves.map((p) => (
                   <div key={p} className="flex items-start gap-2.5">
