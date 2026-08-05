@@ -1,20 +1,20 @@
 import { MapPin, CheckCircle2 } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
-const SETRAG_LOGO = 'https://setrag.eramet.com/wp-content/uploads/sites/6/2021/01/Setrag-Eramet-logo-retina.png';
+const SETRAG_LOGO = '/images/setrag-logo.webp';
 const UC_LOGO = 'https://cdn-flbag.nitrocdn.com/lHRvxOluTwiwfOjFRNeqQHYYVasaauTG/assets/images/optimized/rev-9ea3631/honoris.net/wp-content/uploads/2021/07/UC.png';
 
 const LOGOS: Record<string, string> = {
-  'Power BI': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/3840px-New_Power_BI_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail',
+  'Power BI': '/images/power-bi-logo.webp',
   Python: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
-  'Power Automate': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Microsoft_Power_Automate.svg/1280px-Microsoft_Power_Automate.svg.png',
+  'Power Automate': '/images/power-automate-logo.webp',
   ETL: '',
   DAX: '',
-  Edureka: 'https://cloud.shopback.com/c_scale,c_auto,q_70,f_webp/media-production-aps1/D_uM6eCxnXQ/aHR0cHM6Ly9pbWFnZXMuYmFubmVyYmVhci5jb20vZGlyZWN0L0VHQnFwQVo1T2U5MTg5VkROSi9yZXF1ZXN0cy8wMDAvMDQ5LzA3OC8zNjAvYmtuQWpONGU3NjMxbDRMVllYUFJLeGxEOC85YTk0ZWEwZjM5NTFjNzkxNWQxZDNjZjA2NGVhYTI2Y2VhZmQ4ZWYzLnBuZw.jpg',
-  DataCamp: 'https://brandingstyleguides.com/wp-content/guidelines/2024/03/dataCamp-2020-1.jpg',
+  Edureka: '/images/edureka-logo.webp',
+  DataCamp: '/images/datacamp-logo.webp',
   dltHub: 'https://avatars.githubusercontent.com/u/89419010?s=280&v=4',
   LinkedIn: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/250px-LinkedIn_icon.svg.png',
-  AWS: 'https://assets.aboutamazon.com/dims4/default/dd7f211/2147483647/strip/false/crop/960x720+0+0/resize/960x720!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F66%2Ff3%2Fcb7e8e804a1f991c96593cf465e1%2Faws-logo-white-on-si.jpg',
+  AWS: '/images/aws-logo.webp',
 };
 
 const TOOL_FALLBACKS: Record<string, string> = {
@@ -69,7 +69,7 @@ export function Experience() {
       <div className="max-w-[1120px] mx-auto px-5 md:px-8">
         {/* Header */}
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
-          <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Experience & Credentials</p>
+          <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-2 md:mb-3">Experience & Credentials</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
             Early-career profile with hands-on delivery experience
           </h2>
@@ -116,23 +116,23 @@ export function Experience() {
                 {/* Challenge / Solution / Results */}
                 <div className="grid sm:grid-cols-3 gap-5 md:gap-6 mb-6 md:mb-7">
                   <div>
-                    <p className="text-[10px] md:text-[11px] font-semibold text-accent uppercase tracking-widest mb-1.5">Challenge</p>
+                    <p className="text-[10px] md:text-[11px] font-semibold text-[#d88700] uppercase tracking-widest mb-1.5">Challenge</p>
                     <p className="text-[13px] md:text-[14px] text-gray-600 leading-relaxed">
                       Reporting workflows were manual and fragmented, making recurring KPI tracking slow for operational teams.
                     </p>
                   </div>
                   <div>
-                    <p className="text-[10px] md:text-[11px] font-semibold text-accent uppercase tracking-widest mb-1.5">Solution</p>
+                    <p className="text-[10px] md:text-[11px] font-semibold text-[#d88700] uppercase tracking-widest mb-1.5">Solution</p>
                     <p className="text-[13px] md:text-[14px] text-gray-600 leading-relaxed">
                       Structured KPI tracking, built Power BI dashboards, and automated repetitive reporting steps using Python and Power Automate.
                     </p>
                   </div>
                   <div>
-                    <p className="text-[10px] md:text-[11px] font-semibold text-accent uppercase tracking-widest mb-1.5">Results</p>
+                    <p className="text-[10px] md:text-[11px] font-semibold text-[#d88700] uppercase tracking-widest mb-1.5">Results</p>
                     <div className="space-y-1.5">
                       {RESULTS.map((r) => (
                         <div key={r} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-[14px] h-[14px] text-accent flex-shrink-0 mt-[3px]" />
+                          <CheckCircle2 className="w-[14px] h-[14px] text-[#d88700] flex-shrink-0 mt-[3px]" />
                           <p className="text-[13px] text-gray-600 leading-snug">{r}</p>
                         </div>
                       ))}
@@ -178,8 +178,8 @@ export function Experience() {
                     <p className="text-[13px] md:text-[14px] font-semibold text-prussian leading-snug">{edu.degree}</p>
                     <p className="text-[12px] text-gray-500 mt-0.5">{edu.school}</p>
                     <div className="flex items-center gap-2 mt-1">
-                      <span className="text-[11px] text-gray-400">{edu.period}</span>
-                      <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${edu.status === 'In progress' ? 'bg-accent/10 text-accent' : 'bg-prussian/5 text-prussian/50'}`}>
+                      <span className="text-[11px] text-gray-500">{edu.period}</span>
+                      <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${edu.status === 'In progress' ? 'bg-accent/10 text-[#d88700]' : 'bg-prussian/5 text-prussian/50'}`}>
                         {edu.status}
                       </span>
                     </div>
@@ -196,7 +196,7 @@ export function Experience() {
                 </div>
                 <div>
                   <h3 className="text-[15px] md:text-base font-bold text-prussian">7 Certifications</h3>
-                  <p className="text-[11px] text-gray-400">Credentials across dbt, SQL, Airflow, AWS, dlt, and data engineering</p>
+                  <p className="text-[11px] text-gray-500">Credentials across dbt, SQL, Airflow, AWS, dlt, and data engineering</p>
                 </div>
               </div>
               <div className="space-y-2">
@@ -211,7 +211,7 @@ export function Experience() {
                       )}
                       <div className="min-w-0 flex-1">
                         <p className="text-[12px] md:text-[13px] font-medium text-prussian truncate">{cert.name}</p>
-                        <p className="text-[11px] text-gray-400">{cert.issuer}</p>
+                        <p className="text-[11px] text-gray-500">{cert.issuer}</p>
                       </div>
                       <span className="text-[10px] text-gray-300 flex-shrink-0">{cert.date}</span>
                     </div>

@@ -26,7 +26,7 @@ export function WhyMe({ onBookCall }: WhyMeProps) {
     <section id="why-me" className="bg-white section-mobile">
       <div className="max-w-[1120px] mx-auto px-5 md:px-8">
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
-          <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Why Me</p>
+          <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-2 md:mb-3">Why Me</p>
           <p className="text-[14px] md:text-base font-semibold text-prussian mb-2">Why I fit junior data roles</p>
           <p className="text-[14px] md:text-base text-gray-500 leading-relaxed">
             I bring hands-on project work, internship impact, and a clear understanding of how data work supports operational teams.
@@ -49,7 +49,7 @@ export function WhyMe({ onBookCall }: WhyMeProps) {
                 className={`flex items-start gap-3 reveal-hidden ${points.isVisible ? 'reveal-visible' : ''}`}
                 style={{ transitionDelay: `${(i + 1) * 50}ms` }}
               >
-                <CheckCircle2 className={`w-[18px] h-[18px] md:w-5 md:h-5 flex-shrink-0 mt-0.5 ${p.highlight ? 'text-accent' : 'text-accent/40'}`} />
+                <CheckCircle2 className={`w-[18px] h-[18px] md:w-5 md:h-5 flex-shrink-0 mt-0.5 ${p.highlight ? 'text-[#d88700]' : 'text-[#d88700]/40'}`} />
                 <p className={`text-[14px] md:text-[15px] leading-relaxed ${p.highlight ? 'text-prussian font-medium' : 'text-gray-600'}`}>
                   {p.text}
                 </p>
@@ -59,7 +59,7 @@ export function WhyMe({ onBookCall }: WhyMeProps) {
 
           {/* CTAs */}
           <div ref={cta.ref} className={`reveal-hidden ${cta.isVisible ? 'reveal-visible' : ''}`}>
-            <p className="text-[13px] md:text-[14px] text-gray-400 mb-5 leading-relaxed">
+            <p className="text-[13px] md:text-[14px] text-gray-500 mb-5 leading-relaxed">
               For a quick screen, you can review my resume or book a short intro call.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-2.5">
@@ -125,7 +125,7 @@ export function Approach() {
     <section className="bg-surface section-mobile">
       <div className="max-w-[1120px] mx-auto px-5 md:px-8">
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
-          <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Method</p>
+          <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-2 md:mb-3">Method</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
             My project approach
           </h2>
@@ -163,7 +163,7 @@ export function Approach() {
                         {step.label}
                       </p>
                     </div>
-                    <p className="text-[11px] md:text-[12px] text-gray-400 leading-relaxed pl-8">
+                    <p className="text-[11px] md:text-[12px] text-gray-500 leading-relaxed pl-8">
                       {step.desc}
                     </p>
                   </div>

@@ -12,7 +12,7 @@ const CASE_STUDIES = [
     icon: BarChart3,
     title: 'CRM Sales Analytics Platform',
     tagline: 'Portfolio analytics engineering project using Snowflake, dbt, SQL, Python, and Power BI to model CRM data and deliver sales reporting.',
-    cover: '/images/case-crm-sales.jpg',
+    cover: '/images/case-crm-sales.webp',
     repo: {
       name: 'crm-sales-analytics-platform',
       url: 'https://github.com/marcellin-de/crm-sales-analytics-platform',
@@ -37,7 +37,7 @@ const CASE_STUDIES = [
     icon: Cloud,
     title: 'Dagster Weather Platform',
     tagline: 'Portfolio data platform for hourly weather data with Python ingestion, Dagster orchestration, Great Expectations validation, and run monitoring.',
-    cover: '/images/case-weather-dagster.jpg',
+    cover: '/images/case-weather-dagster.webp',
     repo: {
       name: 'dagster-weather-platform',
       url: 'https://github.com/marcellin-de/dagster-weather-platform',
@@ -62,7 +62,7 @@ const CASE_STUDIES = [
     icon: TrendingUp,
     title: 'Marketing Performance Platform',
     tagline: 'Analytics project using Maven Fuzzy Factory e-commerce data, dlt, dbt, Dagster, Snowflake, and Metabase to analyze marketing KPIs.',
-    cover: '/images/case-marketing-perf.jpg',
+    cover: '/images/case-marketing-perf.webp',
     repo: {
       name: 'marketing-performance-analysis',
       url: 'https://github.com/marcellin-de/marketing-performance-analysis',
@@ -87,7 +87,7 @@ const CASE_STUDIES = [
     icon: ShoppingCart,
     title: 'Vehicle E-Commerce Analytics',
     tagline: 'End-to-end vehicle e-commerce analytics project using ingestion, dbt modeling, data quality checks, Snowflake, and BI reporting patterns.',
-    cover: '/images/case-ecommerce-vehicle.jpg',
+    cover: '/images/case-ecommerce-vehicle.webp',
     repo: {
       name: 'vehicle-ecommerce-analytics',
       url: 'https://github.com/marcellin-de/vehicle-ecommerce-analytics',
@@ -126,7 +126,7 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
             ref={header.ref}
             className={`max-w-2xl mb-10 md:mb-16 reveal-hidden ${header.isVisible ? 'reveal-visible' : ''}`}
           >
-            <p className="text-[11px] md:text-[13px] font-semibold text-accent uppercase tracking-widest mb-2 md:mb-3">Work</p>
+            <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-2 md:mb-3">Work</p>
             <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
               Selected Case Studies
             </h2>
@@ -157,7 +157,7 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
                     <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
                       <div className="flex items-center gap-2.5 mb-2">
                         <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-accent/20 backdrop-blur-sm flex items-center justify-center">
-                          <Icon className="w-4 h-4 md:w-[18px] md:h-[18px] text-accent" />
+                          <Icon className="w-4 h-4 md:w-[18px] md:h-[18px] text-[#d88700]" />
                         </div>
                         <span className="text-[10px] md:text-[11px] font-semibold text-white/50 uppercase tracking-wider">Case Study</span>
                       </div>
@@ -173,10 +173,10 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
                       return (
                         <div key={kpi.label} className="px-4 py-3.5 md:px-6 md:py-4 text-center">
                           <div className="flex items-center justify-center gap-1.5 mb-1">
-                            <KpiIcon className="w-3.5 h-3.5 text-accent/60" />
+                            <KpiIcon className="w-3.5 h-3.5 text-[#d88700]/60" />
                             <span className="text-[15px] md:text-lg font-bold text-prussian tracking-tight">{kpi.value}</span>
                           </div>
-                          <p className="text-[10px] md:text-[11px] text-gray-400 font-medium">{kpi.label}</p>
+                          <p className="text-[10px] md:text-[11px] text-gray-500 font-medium">{kpi.label}</p>
                         </div>
                       );
                     })}
@@ -189,7 +189,7 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
                         href={cs.repo.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 hover:text-accent transition-colors"
+                        className="inline-flex items-center gap-1 hover:text-[#d88700] transition-colors"
                       >
                         <ExternalLink className="w-3 h-3" />
                         {cs.repo.name}
@@ -201,15 +201,15 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
 
                     <div className="grid sm:grid-cols-3 gap-4 mb-5">
                       <div>
-                        <p className="text-[10px] md:text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Problem</p>
+                        <p className="text-[10px] md:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-1">Problem</p>
                         <p className="text-[13px] md:text-[14px] text-gray-600 leading-relaxed">{cs.problem}</p>
                       </div>
                       <div>
-                        <p className="text-[10px] md:text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Challenge</p>
+                        <p className="text-[10px] md:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-1">Challenge</p>
                         <p className="text-[13px] md:text-[14px] text-gray-600 leading-relaxed">{cs.challenge}</p>
                       </div>
                       <div>
-                        <p className="text-[10px] md:text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Output</p>
+                        <p className="text-[10px] md:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-1">Output</p>
                         <p className="text-[13px] md:text-[14px] text-gray-600 leading-relaxed">{cs.output}</p>
                       </div>
                     </div>
@@ -221,14 +221,14 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
                     </div>
 
                     <div className="p-3.5 md:p-4 bg-accent/[0.04] rounded-xl border border-accent/[0.06]">
-                      <p className="text-[12px] md:text-[13px] text-accent font-semibold">{cs.value}</p>
+                      <p className="text-[12px] md:text-[13px] text-[#d88700] font-semibold">{cs.value}</p>
                       <p className="text-[11px] text-prussian/35 mt-0.5">{cs.proves}</p>
                     </div>
 
                     {/* View details button */}
                     <button
                       onClick={() => setSelectedCase(i)}
-                      className="mt-4 group/btn inline-flex items-center gap-1.5 text-[12px] md:text-[13px] font-semibold text-prussian/50 hover:text-accent transition-colors"
+                      className="mt-4 group/btn inline-flex items-center gap-1.5 text-[12px] md:text-[13px] font-semibold text-prussian/50 hover:text-[#d88700] transition-colors"
                     >
                       Open full case study
                       <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
@@ -244,7 +244,7 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
             ref={cta.ref}
             className={`mt-10 md:mt-16 text-center reveal-hidden ${cta.isVisible ? 'reveal-visible' : ''}`}
           >
-            <p className="text-[13px] md:text-[14px] text-gray-400 mb-4">Interested in how these projects match your data team needs?</p>
+            <p className="text-[13px] md:text-[14px] text-gray-500 mb-4">Interested in how these projects match your data team needs?</p>
             <button
               onClick={onBookCall}
               className="group inline-flex items-center gap-2.5 px-6 py-3.5 md:px-7 md:py-4 bg-accent hover:bg-accent-hover text-prussian font-semibold text-[14px] md:text-[15px] rounded-full transition-all duration-200 shadow-xl shadow-accent/15 active:scale-[0.97] md:hover:scale-[1.02]"
