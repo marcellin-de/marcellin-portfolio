@@ -2,18 +2,17 @@ import { MapPin, CheckCircle2 } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const SETRAG_LOGO = '/images/setrag-logo.webp';
-const UC_LOGO = 'https://cdn-flbag.nitrocdn.com/lHRvxOluTwiwfOjFRNeqQHYYVasaauTG/assets/images/optimized/rev-9ea3631/honoris.net/wp-content/uploads/2021/07/UC.png';
 
 const LOGOS: Record<string, string> = {
   'Power BI': '/images/power-bi-logo.webp',
-  Python: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+  Python: '/images/python-logo.svg',
   'Power Automate': '/images/power-automate-logo.webp',
   ETL: '',
   DAX: '',
   Edureka: '/images/edureka-logo.webp',
   DataCamp: '/images/datacamp-logo.webp',
-  dltHub: 'https://avatars.githubusercontent.com/u/89419010?s=280&v=4',
-  LinkedIn: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/250px-LinkedIn_icon.svg.png',
+  dltHub: '/images/dlthub-logo.webp',
+  LinkedIn: '/images/linkedin-logo.webp',
   AWS: '/images/aws-logo.webp',
 };
 
@@ -39,14 +38,14 @@ const EDUCATION = [
     school: 'Université Centrale Tunisie',
     period: '2025–2027',
     status: 'In progress',
-    logo: UC_LOGO,
+
   },
   {
     degree: "Bachelor's Degree in Big Data and Data Analytics",
     school: 'Université Centrale Tunisie',
     period: '2022–2025',
     status: 'Completed',
-    logo: UC_LOGO,
+
   },
 ];
 
@@ -69,7 +68,7 @@ export function Experience() {
       <div className="max-w-[1120px] mx-auto px-5 md:px-8">
         {/* Header */}
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
-          <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-2 md:mb-3">Experience & Credentials</p>
+          <p className="text-[11px] md:text-[13px] font-semibold text-[#995800] uppercase tracking-widest mb-2 md:mb-3">Experience & Credentials</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
             Early-career profile with hands-on delivery experience
           </h2>
@@ -116,23 +115,23 @@ export function Experience() {
                 {/* Challenge / Solution / Results */}
                 <div className="grid sm:grid-cols-3 gap-5 md:gap-6 mb-6 md:mb-7">
                   <div>
-                    <p className="text-[10px] md:text-[11px] font-semibold text-[#d88700] uppercase tracking-widest mb-1.5">Challenge</p>
+                    <p className="text-[10px] md:text-[11px] font-semibold text-[#995800] uppercase tracking-widest mb-1.5">Challenge</p>
                     <p className="text-[13px] md:text-[14px] text-gray-600 leading-relaxed">
                       Reporting workflows were manual and fragmented, making recurring KPI tracking slow for operational teams.
                     </p>
                   </div>
                   <div>
-                    <p className="text-[10px] md:text-[11px] font-semibold text-[#d88700] uppercase tracking-widest mb-1.5">Solution</p>
+                    <p className="text-[10px] md:text-[11px] font-semibold text-[#995800] uppercase tracking-widest mb-1.5">Solution</p>
                     <p className="text-[13px] md:text-[14px] text-gray-600 leading-relaxed">
                       Structured KPI tracking, built Power BI dashboards, and automated repetitive reporting steps using Python and Power Automate.
                     </p>
                   </div>
                   <div>
-                    <p className="text-[10px] md:text-[11px] font-semibold text-[#d88700] uppercase tracking-widest mb-1.5">Results</p>
+                    <p className="text-[10px] md:text-[11px] font-semibold text-[#995800] uppercase tracking-widest mb-1.5">Results</p>
                     <div className="space-y-1.5">
                       {RESULTS.map((r) => (
                         <div key={r} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-[14px] h-[14px] text-[#d88700] flex-shrink-0 mt-[3px]" />
+                          <CheckCircle2 className="w-[14px] h-[14px] text-[#995800] flex-shrink-0 mt-[3px]" />
                           <p className="text-[13px] text-gray-600 leading-snug">{r}</p>
                         </div>
                       ))}
@@ -169,7 +168,7 @@ export function Experience() {
             {/* Education */}
             <div className={`bg-white rounded-2xl border border-gray-100/80 p-5 md:p-7 reveal-hidden ${certs.isVisible ? 'reveal-visible' : ''}`}>
               <div className="flex items-center gap-2.5 mb-5">
-                <img src={UC_LOGO} alt="Université Centrale" className="w-8 h-8 rounded-lg object-contain" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+
                 <h3 className="text-[15px] md:text-base font-bold text-prussian">Education</h3>
               </div>
               <div className="space-y-4">
@@ -179,7 +178,7 @@ export function Experience() {
                     <p className="text-[12px] text-gray-500 mt-0.5">{edu.school}</p>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-[11px] text-gray-500">{edu.period}</span>
-                      <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${edu.status === 'In progress' ? 'bg-accent/10 text-[#d88700]' : 'bg-prussian/5 text-prussian/50'}`}>
+                      <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${edu.status === 'In progress' ? 'bg-accent/10 text-[#995800]' : 'bg-prussian/5 text-prussian/50'}`}>
                         {edu.status}
                       </span>
                     </div>

@@ -15,7 +15,7 @@ export function About({ onBookCall: _onBookCall }: SectionProps) {
     <section className="bg-surface section-mobile">
       <div className="max-w-[1120px] mx-auto px-5 md:px-8">
         <div ref={section.ref} className={`max-w-2xl reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
-          <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-2 md:mb-3">About Me</p>
+          <p className="text-[11px] md:text-[13px] font-semibold text-[#995800] uppercase tracking-widest mb-2 md:mb-3">About Me</p>
           <div className="space-y-4 text-[14px] md:text-[15px] text-gray-500 leading-relaxed">
             <p>
               <span className="text-prussian font-semibold">I am Marcellin DJAMBO</span>, an early-career Data & Analytics Engineer based in Tunis, Tunisia. My focus is practical: building data pipelines, models, and dashboards that make reporting easier to use and trust.
@@ -62,7 +62,7 @@ export function RecruiterSnapshot({ onBookCall }: SectionProps) {
 
       <div className="max-w-[1120px] mx-auto px-5 md:px-8 relative z-10">
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-12 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
-          <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-2 md:mb-3">At a glance</p>
+          <p className="text-[11px] md:text-[13px] font-semibold text-[#995800] uppercase tracking-widest mb-2 md:mb-3">At a glance</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-white tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
             Recruiter Snapshot
           </h2>
@@ -80,7 +80,7 @@ export function RecruiterSnapshot({ onBookCall }: SectionProps) {
                 className={`${card.label === 'Name' || card.label === 'Proof' ? 'col-span-2' : ''} bg-card-dark/50 backdrop-blur-sm rounded-xl border border-white/[0.06] p-3.5 md:p-5 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}
                 style={{ transitionDelay: `${(i + 1) * 50}ms` }}
               >
-                <p className="text-[10px] md:text-[11px] text-white/40 uppercase tracking-wider font-semibold mb-1.5">{card.label}</p>
+                <p className="text-[10px] md:text-[11px] text-white/60 uppercase tracking-wider font-semibold mb-1.5">{card.label}</p>
                 <p className="text-[13px] md:text-[14px] text-white/75 leading-relaxed">{card.value}</p>
               </div>
             ))}
@@ -148,13 +148,13 @@ export function FinalCTA({ onBookCall }: SectionProps) {
             </div>
           </div>
 
-          <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-3 md:mb-4">Open to opportunities</p>
+          <p className="text-[11px] md:text-[13px] font-semibold text-[#995800] uppercase tracking-widest mb-3 md:mb-4">Open to opportunities</p>
           <h2 className="text-[22px] md:text-[36px] font-extrabold text-white tracking-[-0.025em] mb-4 md:mb-5 leading-tight">
             Hiring for junior data roles?
             <br />
             <span className="text-gradient">Let’s discuss where I can contribute.</span>
           </h2>
-          <p className="text-[14px] md:text-base text-white/40 mb-8 md:mb-10 max-w-md mx-auto">
+          <p className="text-[14px] md:text-base text-white/60 mb-8 md:mb-10 max-w-md mx-auto">
             Open to junior, entry-level, graduate, and internship opportunities in data engineering, analytics engineering, BI, and data analysis.
           </p>
 
@@ -180,20 +180,20 @@ export function Footer({ onBookCall }: SectionProps) {
         <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:gap-6">
           <div className="text-center md:text-left">
             <p className="text-[14px] md:text-[15px] font-bold text-white tracking-tight">
-              Marcellin<span className="text-[#d88700]">.</span>
+              Marcellin<span className="text-[#995800]">.</span>
             </p>
-            <p className="text-[12px] md:text-[13px] text-white/40 mt-0.5">Early-career Data & Analytics Engineer, Tunis, Tunisia</p>
+            <p className="text-[12px] md:text-[13px] text-white/60 mt-0.5">Early-career Data & Analytics Engineer, Tunis, Tunisia</p>
           </div>
 
           <div className="flex items-center gap-6">
-            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/50 hover:text-[#d88700] transition-colors">LinkedIn</a>
-            <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/50 hover:text-[#d88700] transition-colors">GitHub</a>
-            <button onClick={onBookCall} className="text-[13px] text-[#d88700] hover:text-[#b87300] font-semibold transition-colors">Contact</button>
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/50 hover:text-[#995800] transition-colors">LinkedIn</a>
+            <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/50 hover:text-[#995800] transition-colors">GitHub</a>
+            <button onClick={onBookCall} className="text-[13px] text-[#995800] hover:text-[#b87300] font-semibold transition-colors">Contact</button>
           </div>
         </div>
 
         <div className="mt-6 pt-5 border-t border-white/[0.04] text-center">
-          <p className="text-[11px] text-white/30">&copy; {year} Marcellin DJAMBO. All rights reserved.</p>
+          <p className="text-[11px] text-white/50">&copy; {year} Marcellin DJAMBO. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -17,6 +17,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased">
       <Navbar onBookCall={openBooking} />
+      <main>
       <Hero onBookCall={openBooking} />
       <CaseStudies onBookCall={openBooking} />
       <Experience />
@@ -27,6 +28,7 @@ export default function App() {
       <About onBookCall={openBooking} />
       <RecruiterSnapshot onBookCall={openBooking} />
       <FinalCTA onBookCall={openBooking} />
+      </main>
       <Footer onBookCall={openBooking} />
       <BackToTop />
     </div>

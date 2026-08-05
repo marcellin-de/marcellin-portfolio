@@ -77,7 +77,7 @@ export function Services({ onBookCall }: ServicesProps) {
     <section className="bg-surface section-mobile">
       <div className="max-w-[1120px] mx-auto px-5 md:px-8">
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
-          <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-2 md:mb-3">Capabilities</p>
+          <p className="text-[11px] md:text-[13px] font-semibold text-[#995800] uppercase tracking-widest mb-2 md:mb-3">Capabilities</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
             Where I can contribute
           </h2>
@@ -94,7 +94,7 @@ export function Services({ onBookCall }: ServicesProps) {
                 <div>
                   <div className="flex items-start gap-3 md:gap-4 mb-4">
                     <div className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-[#d88700]" />
+                      <Icon className="w-5 h-5 text-[#995800]" />
                     </div>
                     <div>
                       <h3 className="text-[16px] md:text-lg font-bold text-prussian">{s.title}</h3>
@@ -117,7 +117,7 @@ export function Services({ onBookCall }: ServicesProps) {
                       </span>
                     ))}
                   </div>
-                  <p className="text-[12px] text-[#d88700] font-semibold">{s.value}</p>
+                  <p className="text-[12px] text-[#995800] font-semibold">{s.value}</p>
                 </div>
 
                 {/* Learn more CTA */}
@@ -126,7 +126,7 @@ export function Services({ onBookCall }: ServicesProps) {
                     <button
                       type="button"
                       onClick={onBookCall}
-                      className="group inline-flex items-center gap-1.5 text-[12px] md:text-[13px] font-semibold text-prussian/40 hover:text-[#d88700] transition-colors"
+                      className="group inline-flex items-center gap-1.5 text-[12px] md:text-[13px] font-semibold text-prussian/40 hover:text-[#995800] transition-colors"
                     >
                       Learn more
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -151,7 +151,7 @@ export function Stack() {
 
       <div className="max-w-[1120px] mx-auto px-5 md:px-8 relative z-10">
         <div ref={section.ref} className={`max-w-2xl mb-8 md:mb-14 reveal-hidden ${section.isVisible ? 'reveal-visible' : ''}`}>
-          <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-2 md:mb-3">Stack</p>
+          <p className="text-[11px] md:text-[13px] font-semibold text-[#995800] uppercase tracking-widest mb-2 md:mb-3">Stack</p>
           <h2 className="text-[28px] md:text-[40px] font-extrabold text-white tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
             Tools I work with
           </h2>
@@ -171,7 +171,7 @@ export function Stack() {
               >
                 <div className="flex items-center gap-2.5 md:gap-3 mb-3">
                   <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-4 h-4 text-[#d88700]" />
+                    <Icon className="w-4 h-4 text-[#995800]" />
                   </div>
                   <div className="min-w-0">
                     <h3 className="text-[13px] md:text-sm font-semibold text-white truncate">{g.title}</h3>

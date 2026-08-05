@@ -58,7 +58,7 @@ export default function Navbar({ onBookCall }: NavbarProps) {
                 onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                 className={`text-[15px] font-bold tracking-tight transition-colors duration-300 ${scrolled ? 'text-prussian' : 'text-white'}`}
               >
-                Marcellin<span className="text-[#d88700]">.</span>
+                Marcellin<span className="text-[#995800]">.</span>
               </a>
               {scrolled && (
                 <span className="hidden md:inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-medium text-emerald-700 bg-emerald-50 rounded-full border border-emerald-100">
@@ -113,7 +113,7 @@ export default function Navbar({ onBookCall }: NavbarProps) {
                 <button
                   key={item.href}
                   onClick={() => go(item.href)}
-                  className="w-full text-left px-4 py-3.5 text-[16px] font-medium text-prussian/75 hover:text-[#d88700] active:bg-accent/[0.04] rounded-xl transition-colors"
+                  className="w-full text-left px-4 py-3.5 text-[16px] font-medium text-prussian/75 hover:text-[#995800] active:bg-accent/[0.04] rounded-xl transition-colors"
                 >
                   {item.label}
                 </button>

@@ -57,7 +57,7 @@ function AnimatedCounter({ target, suffix = '', prefix = '', label, desc }: { ta
 
   return (
     <div ref={ref} className="group cursor-default">
-      <p className="text-[32px] md:text-[44px] font-extrabold text-prussian tracking-[-0.03em] leading-none group-hover:text-[#d88700] transition-colors duration-300">
+      <p className="text-[32px] md:text-[44px] font-extrabold text-prussian tracking-[-0.03em] leading-none group-hover:text-[#995800] transition-colors duration-300">
         {prefix}{count}{suffix}
       </p>
       <p className="text-[13px] md:text-sm font-semibold text-prussian/70 mt-1.5">{label}</p>
@@ -97,7 +97,7 @@ export default function Hero({ onBookCall }: HeroProps) {
                 <div className="absolute -inset-2.5 rounded-full bg-gradient-to-br from-accent/20 via-accent/5 to-transparent blur-lg" />
                 <div className="absolute -inset-[2px] rounded-full bg-gradient-to-br from-accent/40 to-accent/10" />
                 <img
-                  src={PROFILE_PHOTO}
+                  src={PROFILE_PHOTO} fetchPriority="high" loading="eager"
                   alt="Marcellin DJAMBO profile photo"
                   className="relative w-24 h-24 md:w-[160px] md:h-[160px] rounded-full object-cover border-[3px] border-black/40"
                 />
@@ -139,7 +139,7 @@ export default function Hero({ onBookCall }: HeroProps) {
               <div className="flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2 text-[11px] sm:text-[12px] md:text-[13px] mb-5 md:mb-7">
                 <span className="glass-pill px-2.5 py-1 rounded-full text-white/40">Ingest data</span>
                 <span className="glass-pill px-2.5 py-1 rounded-full text-white/40">Model data</span>
-                <span className="px-2.5 py-1 rounded-full bg-accent/[0.08] border border-accent/[0.12] text-[#d88700]/70">Report KPIs</span>
+                <span className="px-2.5 py-1 rounded-full bg-accent/[0.08] border border-accent/[0.12] text-[#995800]/70">Report KPIs</span>
               </div>
 
               {/* CTA */}
@@ -177,7 +177,7 @@ export default function Hero({ onBookCall }: HeroProps) {
             <AnimatedCounter target={70} suffix="%" label="Reporting time reduced" desc="Up to 70% reduction on recurring reporting workflows" />
             <AnimatedCounter target={7} suffix="" label="Certifications" desc="dbt, SQL, Airflow, AWS, dlt, and data engineering" />
             <div className="group cursor-default">
-              <p className="text-[32px] md:text-[44px] font-extrabold text-prussian tracking-[-0.03em] leading-none group-hover:text-[#d88700] transition-colors duration-300">6K+</p>
+              <p className="text-[32px] md:text-[44px] font-extrabold text-prussian tracking-[-0.03em] leading-none group-hover:text-[#995800] transition-colors duration-300">6K+</p>
               <p className="text-[13px] md:text-sm font-semibold text-prussian/70 mt-1.5">LinkedIn community</p>
               <p className="text-[12px] md:text-[13px] text-gray-500 mt-0.5 leading-snug">Data professionals following my learning, projects, and data content</p>
             </div>

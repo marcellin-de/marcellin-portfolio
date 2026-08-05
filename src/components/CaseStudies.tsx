@@ -126,7 +126,7 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
             ref={header.ref}
             className={`max-w-2xl mb-10 md:mb-16 reveal-hidden ${header.isVisible ? 'reveal-visible' : ''}`}
           >
-            <p className="text-[11px] md:text-[13px] font-semibold text-[#d88700] uppercase tracking-widest mb-2 md:mb-3">Work</p>
+            <p className="text-[11px] md:text-[13px] font-semibold text-[#995800] uppercase tracking-widest mb-2 md:mb-3">Work</p>
             <h2 className="text-[28px] md:text-[40px] font-extrabold text-prussian tracking-[-0.025em] mb-3 md:mb-4 leading-tight">
               Selected Case Studies
             </h2>
@@ -157,7 +157,7 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
                     <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
                       <div className="flex items-center gap-2.5 mb-2">
                         <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-accent/20 backdrop-blur-sm flex items-center justify-center">
-                          <Icon className="w-4 h-4 md:w-[18px] md:h-[18px] text-[#d88700]" />
+                          <Icon className="w-4 h-4 md:w-[18px] md:h-[18px] text-[#995800]" />
                         </div>
                         <span className="text-[10px] md:text-[11px] font-semibold text-white/50 uppercase tracking-wider">Case Study</span>
                       </div>
@@ -173,7 +173,7 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
                       return (
                         <div key={kpi.label} className="px-4 py-3.5 md:px-6 md:py-4 text-center">
                           <div className="flex items-center justify-center gap-1.5 mb-1">
-                            <KpiIcon className="w-3.5 h-3.5 text-[#d88700]/60" />
+                            <KpiIcon className="w-3.5 h-3.5 text-[#995800]/60" />
                             <span className="text-[15px] md:text-lg font-bold text-prussian tracking-tight">{kpi.value}</span>
                           </div>
                           <p className="text-[10px] md:text-[11px] text-gray-500 font-medium">{kpi.label}</p>
@@ -189,7 +189,7 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
                         href={cs.repo.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 hover:text-[#d88700] transition-colors"
+                        className="inline-flex items-center gap-1 hover:text-[#995800] transition-colors"
                       >
                         <ExternalLink className="w-3 h-3" />
                         {cs.repo.name}
@@ -221,14 +221,14 @@ export default function CaseStudies({ onBookCall }: CaseStudiesProps) {
                     </div>
 
                     <div className="p-3.5 md:p-4 bg-accent/[0.04] rounded-xl border border-accent/[0.06]">
-                      <p className="text-[12px] md:text-[13px] text-[#d88700] font-semibold">{cs.value}</p>
+                      <p className="text-[12px] md:text-[13px] text-[#995800] font-semibold">{cs.value}</p>
                       <p className="text-[11px] text-prussian/35 mt-0.5">{cs.proves}</p>
                     </div>
 
                     {/* View details button */}
                     <button
                       onClick={() => setSelectedCase(i)}
-                      className="mt-4 group/btn inline-flex items-center gap-1.5 text-[12px] md:text-[13px] font-semibold text-prussian/50 hover:text-[#d88700] transition-colors"
+                      className="mt-4 group/btn inline-flex items-center gap-1.5 text-[12px] md:text-[13px] font-semibold text-prussian/50 hover:text-[#995800] transition-colors"
                     >
                       Open full case study
                       <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
